@@ -13,10 +13,10 @@ CH10 Extras.
 /* CH01 Global Styles */
 body {
   font-family: 'Open Sans', verdana, arial, sans-serif;
-  position: relative;
-  color: #605951;
+  color: #333;
   margin: 0;
   padding: 0;
+  background-color: #f8f9fa;
 }
 
 p {
@@ -25,236 +25,185 @@ p {
   margin: 0 0 15px 0;
 }
 
+ul {
+  padding: 0;
+  list-style: none;
+}
+
 li {
   padding-bottom: 5px;
 }
 
-.gray-background ul {
-  list-style: none;
-  padding: 0;
-}
-
-.gray-background li {
-  font-size: 16px;
-  line-height: 1.65; 
-  padding-left: 1.3em;
-}
-
-.gray-background li:before {
-  content: "\f054"; /* FontAwesome Unicode */
-  font-family: FontAwesome;
-  display: inline-block;
-  color: #C1B398;
-  margin-left: -1.3em; /* same as padding-left set on li */
-  width: 1.3em; /* same as padding-left set on li */
-  font-size: 0.6em;
-}
-
-.gray-background li:nth-child(odd):before {
-  color: #61A6AB;
-}
-
-.gray-background li ul li:before {
-  content: "\f0da"; /* FontAwesome Unicode */
-  font-size: 0.8em;
-}
-
 img {
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, .5);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);
   margin-top: 20px;
+  max-width: 100%;
+}
+
+a {
+  color: #61A6AB;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* CH02 Header */
 .header-background {
   background-color: #61A6AB;
   color: #fff;
-  padding: 20px 0;
+  padding: 40px 0;
+  text-align: center;
 }
 
-.header-background h4 {
+.header-background h1 {
+  font-size: 2.5rem;
   margin: 0;
 }
 
+.header-background p {
+  font-size: 1.2rem;
+  margin: 5px 0 0;
+}
+
 /* CH03 Page Structure */
+.container {
+  padding: 20px;
+}
+
 section {
-  padding-top: 130px;
-  margin-top: -130px;
+  padding: 60px 0;
+}
+
+.gray-background {
+  background-color: #f0f0f0;
+}
+
+.white-background {
+  background-color: #ffffff;
 }
 
 figure img {
-  width: 90%;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 footer {
   background-color: #61A6AB;
   color: #fff;
   padding: 20px;
-  margin-top: 20px;
-}
-
-.float-left {
-  float: left;
-}
-
-.folio img {
-  margin: 20px;
-}
-
-.figure {
-  background-color: #C8E3E5;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.figure:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.figure-caption {
-  margin: 0 20px 20px 20px;
-}
-
-.padding-top {
-  padding-top: 160px;
+  text-align: center;
 }
 
 /* CH04 Headings */
+h1, h2, h3, h4 {
+  font-family: 'Lato', sans-serif;
+  margin: 0 0 20px;
+}
+
 h1 {
-  font-family: 'Lato', 'Open Sans', helvetica, verdana, arial, sans-serif;
-  color: #605951;
-  font-size: 6em;
-  font-weight: 100;
-  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
 }
 
 h2 {
-  padding-top: 20px;
-  font-family: 'Lato', 'Open Sans', helvetica, verdana, arial, sans-serif;
-  color: #61A6AB;
-  font-size: 3em;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #61A6AB;
-  margin: 0;
+  font-size: 2rem;
+  color: #333;
+  border-bottom: 2px solid #61A6AB;
+  padding-bottom: 10px;
 }
 
 h3 {
-  line-height: 1.55;
-  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+  color: #555;
 }
 
 h4 {
-  letter-spacing: 3px;
-  text-shadow: 1px 1px rgba(0, 0, 0, .5);
-  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  color: #fff;
 }
 
 /* CH05 Text Styles */
-h1 .bolder {
-  font-weight: 400;
+p {
+  color: #555;
 }
 
-.white-background h2 {
+.gray-background ul li:before {
+  content: "\f054"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
   color: #61A6AB;
-}
-
-a {
-  text-decoration: none;
-  color: #335d60;
-}
-
-a:link {
-  color: #335d60;
-}
-
-a:visited {
-  color: #525252;
-}
-
-a:hover {
-  color: #335d60;
-}
-
-a:active {
-  color: #CC333F;
+  margin-right: 10px;
 }
 
 /* CH06 Navigation */
 .navbar-default {
   background-color: #fff;
-  box-shadow: 1px 1px 12px rgba(0, 0, 0, .5);
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
 }
 
-.nav {
-  font-weight: bold;
-  font-size: 1.4em;
+.navbar-default .navbar-nav > li > a {
+  color: #333;
+  font-size: 1.2rem;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: #605951;
+.navbar-default .navbar-nav > li > a:hover {
+  color: #61A6AB;
+}
+
+.navbar-toggle {
+  background-color: #61A6AB;
+  border-color: #61A6AB;
+}
+
+.navbar-toggle .icon-bar {
   background-color: #fff;
-}
-
-.nav-pills > li > a {
-  color: #999;
-  background-color: #fff;
-}
-
-.nav-pills > li > a:hover {
-  color: #CC333F;
-  background-color: #fff;
-}
-
-#myNavbar {
-  margin-top: 1em;
 }
 
 /* CH08 Forms */
-input {
-  margin-bottom: 15px;
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 1rem;
 }
 
 .btn-outline-danger {
   margin-top: 20px;
   color: #61A6AB;
-  font-weight: bolder;
-  background-color: #F7EFED;
+  border: 2px solid #61A6AB;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background-color: #61A6AB;
+  color: #fff;
   border-color: #61A6AB;
-  border-width: 2px;
 }
 
 /* CH09 Comments */
-/* List of colours:
+/* Colors:
    Teal #61A6AB
-   Dark teal #335d60
-   Light teal #C8E3E5
-   Brown #605951
-   Light brown #C1B398
-   Red #CC333F
+   Dark Gray #333
+   Light Gray #f0f0f0
+   White #ffffff
 */
 
 /* CH10 Extras */
-.white-background {
-  background-color: #FFF;
-  color: #4D3B3B;
+.social-icons span {
+  font-size: 48px;
+  margin: 10px;
+  color: #61A6AB;
+  transition: color 0.3s;
 }
 
-.gray-background {
-  background-image: repeating-linear-gradient(45deg, #ccc, #ccc 15px, #dbdbdb 15px, #dbdbdb 30px);
+.social-icons span:hover {
+  color: #333;
 }
 
-.gray-background .container {
-  background-color: #F7EFED;
-  padding: 20px 60px;
-}
-
-.white-background .container {
-  background-color: #FFF;
-  padding: 20px 60px;
-}
-
-.indent {
-  margin-left: 40px;
-}
