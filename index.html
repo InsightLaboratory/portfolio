@@ -1,22 +1,92 @@
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,700|Lato:300,700" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Manuel Torres - CV</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,700|Lato:300,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener un archivo styles.css con el estilo que mencionaste -->
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header-background {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .navbar-header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+        }
+        .navbar-header h4 {
+            margin: 0;
+        }
+        .navbar-nav {
+            margin: 0;
+        }
+        .navbar-nav li {
+            margin: 0 10px;
+        }
+        .navbar-nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .gray-background {
+            background-color: #e9ecef;
+            padding: 20px 0;
+        }
+        .white-background {
+            background-color: #ffffff;
+            padding: 20px 0;
+        }
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+        }
+        .figure-caption {
+            text-align: center;
+            font-size: 14px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+        .btn {
+            margin-top: 10px;
+        }
+        .indent {
+            padding-top: 10px;
+        }
+        .social-icons span {
+            font-size: 48px;
+            margin: 10px;
+        }
+        .social-icons a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
 <body data-spy="scroll" data-target="#myNavbar" data-offset="160">
+    <header class="header-background text-center">
+        <h1>Juan Manuel Torres</h1>
+        <p>9 de julio 679 • Córdoba, Argentina • juan.manuel.torres@mi.unc.edu.ar • 3518609599</p>
+    </header>
 
-    <!-- Sección "About" -->
-    <section id="about"></section> 
-
-    <!-- Barra de navegación -->
     <nav class="navbar navbar-default navbar-fixed-top navbar-header">
-        <div class="row header-background">
-            <h4 class="text-center">Web design — User Experience — Virtual Reality</h4>
-        </div>
-
-        <div class="container container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-xs-8 col-sm-10">
-                    <!-- Nombre visible en dispositivos pequeños -->
-                    <h3 class="hidden-md visible-xs visible-sm hidden-lg">Tu Nombre <span class="bolder">Apellido</span></h3>
+                    <h4 class="hidden-md visible-xs visible-sm hidden-lg">Juan Manuel Torres</h4>
                 </div>
                 <div class="col-xs-4 col-sm-2">
                     <div class="navbar-header">
@@ -29,70 +99,140 @@
                     </div>
                 </div>
             </div>
-            <div class="row header">
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                 
-                    <div class="col-md-6">
-                        <!-- Nombre visible en dispositivos medianos y grandes -->
-                        <section id="about">
-                            <h1 class="visible-md hidden-xs hidden-sm visible-lg">Tu Nombre <span class="bolder">Apellido</span></h1>
-                        </section>
-                    </div>
-                    <div class="col-md-6" id="myNavbar">
-                        <ul class="navbar nav nav-pills navbar-right" id="myNavbar">
-                            <li role="presentation"><a href="#about">About</a></li>
-                            <li role="presentation"><a href="#portfolio">Portfolio</a></li>
-                            <li role="presentation"><a href="#freecodecamp">Free Code Camp</a></li>
-                            <li role="presentation"><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="navbar-nav nav navbar-right">
+                    <li role="presentation"><a href="#education">Educación</a></li>
+                    <li role="presentation"><a href="#experience">Experiencia</a></li>
+                    <li role="presentation"><a href="#profile">Perfil Profesional</a></li>
+                    <li role="presentation"><a href="#projects">Proyectos</a></li>
+                    <li role="presentation"><a href="#contact">Contacto</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <div class="gray-background padding-top">
-        <div class="container container-fluid">
-            <h2>Who am I?</h2>
+    <main>
+        <!-- Educación -->
+        <section id="education" class="container gray-background">
+            <h2>Educación</h2>
             <div class="row">
-                <div class="col-xs-12 col-sm-10 col-md-6">
-                    <h3>I love helping people solve problems</h3>
-                    <p>
-                        I have a passion for solving problems, whether it be real-world problems for industry using user experience (UX), tackling code bugs in websites or teaching students how to solve problems with design and UX research. When I started studying web design and development back in 2000 I was inspired by my TAFE college teachers. I decided right then I wanted to combine my two passions — creating websites and teaching. Now I’m lucky enough to do both as a lecturer at Swinburne University of Technology.
-                    </p>
-                    <h3>Experience</h3>
-                    <ul>
-                        <li>Lecturer in web design, UX, design research. 2011-Current.</li>
-                        <li>Freelance illustrator</li>
-                        <li>Freelance web designer</li>
-                    </ul>
-                    <p>
-                        <h3>My toolkit</h3>
-                        <ul>
-                            <li>Storyboarding for UX, animation and film</li>
-                            <li>Illustration</li>
-                            <li>Web design</li>
-                            <li>Stakeholder research, including
-                                <ul>
-                                    <li>Interviews</li>
-                                    <li>Focus groups</li>
-                                    <li>Usability testing</li>
-                                    <li>Participant observation</li>
-                                    <li>Design probes</li>
-                                    <li>Co-design workshops</li>
-                                </ul>
-                            </li>
-                            <li>Unity</li>
-                            <li>Adobe CC</li>
-                            <li>HTML/CSS</li>
-                            <li>PHP</li>
-                            <li>MySQL</li>
-                        </ul>
-                    </p>
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Facultad de Ciencias Exactas, Físicas y Naturales</h3>
+                    <p>Universidad Nacional de Córdoba<br>
+                    Ciencias Geológicas, Bachiller en ciencias aplicadas.<br>
+                    Promedio: 7.15<br>
+                    2019</p>
                 </div>
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5">
-                    <img class="img-responsive img-circle" src="https://i.ibb.co/167G0mt/Ade-Kruiff-pic.jpg" alt="Profile Picture">
+                <div class="col-xs-12 col-sm-6">
+                    <h3>Escuela Industrial “Domingo Faustino Sarmiento”</h3>
+                    <p>Universidad Nacional de San Juan<br>
+                    Técnico Medio en Minería.<br>
+                    Promedio General: 8.37<br>
+                    2011</p>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- Experiencia -->
+        <section id="experience" class="container white-background">
+            <h2>Experiencia</h2>
+            <div class="experience-item">
+                <h3>Local Cru</h3>
+                <p>Bolivia 281, Nueva Córdoba<br>
+                Jefe de cocina/Encargado<br>
+                06 2023 – 12 2023</p>
+                <p>Atención al cliente, coordinación y capacitación del personal, control de costos y presupuesto, facturación, manejo de stock, proveedores, y administración general garantizando la calidad e higiene de los productos, mejorando la calidad del servicio al cliente y la eficiencia operativa. Uso de maquinaria industrial en general. Carnet de manipulador de alimentos vigente.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Local Risata</h3>
+                <p>Obispo oro 444, Nueva Córdoba<br>
+                Maestro Pizzero/Encargado de producción<br>
+                10 2022 – 08 2024</p>
+                <p>Atención al cliente, coordinación y capacitación del personal, manejo de stock, proveedores. Capacitación en Nucleo IT.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Local Don Afif</h3>
+                <p>Octavio Pinto 3277, Av. Fuerza Area 1663<br>
+                Atención en mostrador y atención telefónica.<br>
+                08 2021 – 08 2022</p>
+                <p>Maestro Pizzero, Armado y cocción de empanadas, Carga y descarga de productos, Limpieza y mantenimiento general, capacitación en bromatología.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Local Fuga Resto Bar</h3>
+                <p>Fructuoso Rivera 255, Guemes<br>
+                Maestro pizzero.<br>
+                11 2019 – 07 2021</p>
+                <p>Encargado de panadería, jefe de cocina, lomitero-planchero, bachero. Encargado de compras. Capacitación en gastronomía, coctelería y cafetería. Elaboración de 150 platos diarios en promedio. Elaboración de panificados.</p>
+            </div>
+        </section>
+
+        <!-- Perfil Profesional -->
+        <section id="profile" class="container gray-background">
+            <h2>Perfil Profesional</h2>
+            <p>Diseñador y programador de herramientas integrales web, alineado con las tendencias del mercado actual enfocado en la visibilidad y fidelización de clientes. Optimización de motores de búsqueda web. Desarrollo de plataformas multimedia y de presentación visual para campañas de marketing digital y campañas de email. Sumá credibilidad y profesionalismo pueden transformar radicalmente el éxito de un restaurante.</p>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="projects" class="container white-background">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h3>Nombre del Proyecto 1</h3>
+                <p>Descripción breve del proyecto. Puedes agregar más detalles y un enlace aquí.</p>
+                <a href="enlace-al-proyecto-1" target="_blank">Ver proyecto</a>
+                <img src="ruta-a-imagen-del-proyecto-1.jpg" alt="Imagen del Proyecto 1" class="img-responsive">
+            </div>
+            <div class="project">
+                <h3>Nombre del Proyecto 2</h3>
+                <p>Descripción breve del proyecto. Puedes agregar más detalles y un enlace aquí.</p>
+                <a href="enlace-al-proyecto-2" target="_blank">Ver proyecto</a>
+                <img src="ruta-a-imagen-del-proyecto-2.jpg" alt="Imagen del Proyecto 2" class="img-responsive">
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="container gray-background">
+            <h2>Contacto</h2>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Juan Manuel Torres">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="juan.manuel.torres@mi.unc.edu.ar">
+                            <label for="phone">Número de teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="351-860-9599">
+                            <label for="message">Mensaje</label>
+                            <textarea rows="6" id="message" name="message" class="form-control" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            <button type="submit" class="btn btn-outline-danger btn-lg pull-right">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-5 col-md-offset-1">
+                    <h3>Contacta para conocer cómo puedo ayudarte a mejorar tu negocio.</h3>
+                    <p>O puedes contactarme para hablar sobre otros temas interesantes como…</p>
+                    <ul>
+                        <li>Novelas gráficas</li>
+                        <li>Star Wars</li>
+                        <li>Esperanto (puntos extra si escribes en Esperanto)</li>
+                        <li>Realidad virtual</li>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/juan.manuel.torres" target="_blank"><span class="fa fa-facebook-square" style="font-size:48px; color:#3b5998;"></span></a>
+                        <a href="https://www.linkedin.com/in/juan-manuel-torres" target="_blank"><span class="fa fa-linkedin-square" style="font-size:48px; color:#007bb6;"></span></a>
+                        <a href="https://twitter.com/juanmanuel_torres" target="_blank"><span class="fa fa-twitter-square" style="font-size:48px; color:#00aced;"></span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center white-background">
+        <p>&copy;2024 Juan Manuel Torres, todos los derechos reservados.</p>
+    </footer>
+<!-- Incluye tus scripts de JavaScript al final del body -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Asegúrate de incluir jQuery si aún no lo has hecho -->
+<script src="script.js"></script> <!-- Incluye tu archivo script.js -->
+
 </body>
+</html>
