@@ -3,161 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Manuel Torres - CV</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,700|Lato:300,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener un archivo styles.css con el estilo que mencionaste -->
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .header-background {
-            background-color: #f8f9fa;
-            padding: 20px 0;
-        }
-        .navbar-header {
-            background-color: #343a40;
-            color: #fff;
-            padding: 10px;
-        }
-        .navbar-header h4 {
-            margin: 0;
-        }
-        .navbar-nav {
-            margin: 0;
-        }
-        .navbar-nav li {
-            margin: 0 10px;
-        }
-        .navbar-nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .container {
-            padding: 20px;
-        }
-        .gray-background {
-            background-color: #e9ecef;
-            padding: 20px 0;
-        }
-        .white-background {
-            background-color: #ffffff;
-            padding: 20px 0;
-        }
-        .img-responsive {
-            max-width: 100%;
-            height: auto;
-        }
-        .figure-caption {
-            text-align: center;
-            font-size: 14px;
-        }
-        .text-center {
-            text-align: center;
-        }
-        .form-control {
-            margin-bottom: 10px;
-        }
-        .btn {
-            margin-top: 10px;
-        }
-        .indent {
-            padding-top: 10px;
-        }
-        .social-icons span {
-            font-size: 48px;
-            margin: 10px;
-        }
-        .social-icons a {
-            color: inherit;
-            text-decoration: none;
-        }
-    </style>
+    <title>InsightLab</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body data-spy="scroll" data-target="#myNavbar" data-offset="160">
-    <header class="header-background text-center">
-        <h1>Juan Manuel Torres</h1>
-        <p> Córdoba, Argentina • juan.manuel.torres@mi.unc.edu.arrr • </p>
-    </header>
-
-    <nav class="navbar navbar-default navbar-fixed-top navbar-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-8 col-sm-10">
-                    <h4 class="hidden-md visible-xs visible-sm hidden-lg">Juan Manuel Torres</h4>
-                </div>
-                <div class="col-xs-4 col-sm-2">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="navbar-nav nav navbar-right">
-                    <li role="presentation"><a href="#education">Educación</a></li>
-                    <li role="presentation"><a href="#experience">Experiencia</a></li>
-                    <li role="presentation"><a href="#profile">Perfil Profesional</a></li>
-                    <li role="presentation"><a href="#projects">Proyectos</a></li>
-                    <li role="presentation"><a href="#contact">Contacto</a></li>
-                </ul>
-            </div>
+<body>
+    <header>
+        <div class="title-container">
+            <h1 class="glitch" data-text="AILL">AILL</h1>
         </div>
-    </nav>
-
+    </header>
     <main>
-        <!-- Educación -->
-        <section id="education" class="container gray-background">
-            <h2>Educación</h2>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                    <h3>Facultad de Ciencias Exactas, Físicas y Naturales</h3>
-                    <p>Universidad Nacional de Córdoba<br>
-                    Ciencias Geológicas, Bachiller en ciencias aplicadas.<br>
-                    Promedio: 7.15<br>
-                    2019</p>
+        <section class="grid-section">
+            <div class="grid-container">
+                <!-- Cuadros de colores con texto y enlaces -->
+                <div class="color-box pink">
+                    <p>Texto rosa</p>
+                    <a href="#">Enlace rosa</a>
                 </div>
-                <div class="col-xs-12 col-sm-6">
-                    <h3>Escuela Industrial “Domingo Faustino Sarmiento”</h3>
-                    <p>Universidad Nacional de San Juan<br>
-                    Técnico Medio en Minería.<br>
-                    Promedio General: 8.37<br>
-                    2011</p>
+                <div class="color-box skyblue">
+                    <p>Texto celeste cielo</p>
+                    <a href="#">Enlace celeste cielo</a>
+                </div>
+                <div class="color-box neon-green">
+                    <p>Texto verde neón</p>
+                    <a href="#">Enlace verde neón</a>
+                </div>
+                <div class="color-box pearl">
+                    <p>Texto gris perlado</p>
+                    <a href="#">Enlace gris perlado</a>
                 </div>
             </div>
         </section>
-
-        
-
-        <!-- Perfil Profesional -->
-        <section id="profile" class="container gray-background">
-            <h2>Perfil Profesional</h2>
-            <p>Diseñador y programador de herramientas integrales web, alineado con las tendencias del mercado actual enfocado en la visibilidad y fidelización de clientes. Optimización de motores de búsqueda web. Desarrollo de plataformas multimedia y de presentación visual para campañas de marketing digital y campañas de email. Sumá credibilidad y profesionalismo pueden transformar radicalmente el éxito de un restaurante.</p>
-        </section>
-
-        <!-- Proyectos -->
-        <section id="projects" class="container white-background">
-            <h2>Proyectos</h2>
-            <div class="project">
-                <h3>Nombre del Proyecto 1</h3>
-                <p>Descripción breve del proyecto. Puedes agregar más detalles y un enlace aquí.</p>
-                <a href="enlace-al-proyecto-1" target="_blank">Ver proyecto</a>
-                <img src="ruta-a-imagen-del-proyecto-1.jpg" alt="Imagen del Proyecto 1" class="img-responsive">
+        <!-- Cubos interactivos -->
+        <section class="grid-section">
+            <div class="wrapcube">
+                <div id="a" class="cube">
+                    <div class="side front">HOVER ME</div>
+                    <div class="side left"></div>
+                    <div class="side right"></div>
+                    <div class="side back"></div>
+                    <div class="side top"></div>
+                    <div class="side bottom"></div>
+                </div>
+                <div id="b" class="cube">
+                    <div class="side front">HOVER ME</div>
+                    <div class="side left"></div>
+                    <div class="side right"></div>
+                    <div class="side back"></div>
+                    <div class="side top"></div>
+                    <div class="side bottom"></div>
+                </div>
+                <div id="c" class="cube">
+                    <div class="side front">HOVER ME</div>
+                    <div class="side left"></div>
+                    <div class="side right"></div>
+                    <div class="side back"></div>
+                    <div class="side top"></div>
+                    <div class="side bottom"></div>
+                </div>
             </div>
-            <div class="project">
-                <h3>Nombre del Proyecto 2</h3>
-                <p>Descripción breve del proyecto. Puedes agregar más detalles y un enlace aquí.</p>
-                <a href="enlace-al-proyecto-2" target="_blank">Ver proyecto</a>
-                <img src="ruta-a-imagen-del-proyecto-2.jpg" alt="Imagen del Proyecto 2" class="img-responsive">
-            </div>
         </section>
-
+ 
         <!-- Contacto -->
         <section id="contact" class="container gray-background">
             <h2>Contacto</h2>
@@ -205,3 +111,4 @@
 
 </body>
 </html>
+
