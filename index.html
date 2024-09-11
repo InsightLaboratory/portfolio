@@ -5,99 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan Manuel Torres</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="title-container">
-            <h1 class="glitch" data-text="Juan Manuel Torres">Portfolio Juan Manuel Torres</h1>
-            <h3 class="glitch" data-text="Juan Manuel Torres">Ciencias Aplicadas F.C.E.F.yN. U.N.C.</h1>
+            <h1 class="glitch" data-text="Juan Manuel Torres">Juan Manuel Torres</h1>
+            <h3 class="glitch" data-text="Juan Manuel Torres">Ciencias Aplicadas F.C.E.F.yN. U.N.C.</h3>
+            
         </div>
     </header>
+
     <main>
         <section class="grid-section">
             <div class="grid-container">
-                <!-- Cuadros de colores con texto y enlaces -->
                 <div class="color-box pink">
-                    <p>Texto rosa</p>
-                    <a href="#">Enlace rosa</a>
+                    <h3>Insightlab: Aptitudes Técnicas</h3>
+                    <p>HTML Semántico, CSS Moderno, JavaScript para interactividad, integración de APIs y widgets externos.</p>
+                    <a href="https://insightlaboratory.github.io">Visitar Proyecto</a>
                 </div>
                 <div class="color-box skyblue">
-                    <p>Texto celeste cielo</p>
-                    <a href="#">Enlace celeste cielo</a>
+                    <h3>Aplicaciones Google Earth Engine</h3>
+                    <p>Uso de Earth Engine para análisis geoespacial avanzado con visualización de datos.</p>
+                    <a href="https://github.com/InsightLaboratory/MisAplicaciones">Ver en GitHub</a>
                 </div>
                 <div class="color-box neon-green">
-                    <p>Texto verde neón</p>
-                    <a href="#">Enlace verde neón</a>
+                    <h3>QGIS</h3>
+                    <p>Análisis y visualización geoespacial con QGIS, manejo avanzado de datos geográficos.</p>
+                    <a href="https://www.tiktok.com/@insightlaboratory?is_from_webapp=1&sender_device=pc">Ver Detalles</a>
                 </div>
                 <div class="color-box pearl">
-                    <p>Texto gris perlado</p>
-                    <a href="#">Enlace gris perlado</a>
+                    <h3>PostgreSQL & R</h3>
+                    <p>Base de datos relacional y análisis estadístico usando R.</p>
+                    <a href="#">Explora el Proyecto Proximamente</a>
                 </div>
             </div>
         </section>
-        <!-- Cubos interactivos -->
-        <section class="grid-section">
-            <div class="wrapcube">
-                <div id="a" class="cube">
-                    <div class="side front">In lab</div>
-                    <div class="side left"></div>
-                    <div class="side right"></div>
-                    <div class="side back"></div>
-                    <div class="side top"></div>
-                    <div class="side bottom"></div>
-                </div>
-                <div id="b" class="cube">
-                    <div class="side front">In lab</div>
-                    <div class="side left"></div>
-                    <div class="side right"></div>
-                    <div class="side back"></div>
-                    <div class="side top"></div>
-                    <div class="side bottom"></div>
-                </div>
-                <div id="c" class="cube">
-                    <div class="side front">In lab</div>
-                    <div class="side left"></div>
-                    <div class="side right"></div>
-                    <div class="side back"></div>
-                    <div class="side top"></div>
-                    <div class="side bottom"></div>
-                </div>
-            </div>
-        </section>
- 
+
         <!-- Contacto -->
         <section id="contact" class="container gray-background">
             <h2>Contacto</h2>
             <div class="row">
                 <div class="col-xs-12 col-sm-10 col-md-6">
-                    <form>
+                    <form action="https://formspree.io/f/mqazoeew" method="POST">
+                        <input type="hidden" name="_next" value="https://insightlaboratory.github.io/portfolio/"> <!-- URL de redirección después del envío -->
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required>
                             <label for="email">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Tu@email.com">
-                            <label for="phone">Número de teléfono</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="xxx-xxx-xxxx">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Tu@email.com" required>
                             <label for="message">Mensaje</label>
-                            <textarea rows="6" id="message" name="message" class="form-control" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            <textarea rows="6" id="message" name="message" class="form-control" placeholder="Escribe tu mensaje aquí..." required></textarea>
                             <button type="submit" class="btn btn-outline-danger btn-lg pull-right">Enviar</button>
                         </div>
                     </form>
                 </div>
                 <div class="col-xs-12 col-sm-10 col-md-5 col-md-offset-1">
-                    <h3>Contactame para conocer cómo puedo ayudarte a mejorar tu negocio.</h3>
-                    <p>O puedes contactarme para hablar sobre otros temas interesantes como…</p>
+                    <h3>Hablemos sobre proyectos</h3>
                     <ul>
-                        <li>Qgis</li>
+                        <li>QGIS</li>
                         <li>Google Earth Engine</li>
                         <li>POSTGRESQL</li>
                         <li>R</li>
                     </ul>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/juan.manuel.torres" target="_blank"><span class="fa fa-facebook-square" style="font-size:48px; color:#3b5998;"></span></a>
-                        <a href="https://www.linkedin.com/in/juan-manuel-torres" target="_blank"><span class="fa fa-linkedin-square" style="font-size:48px; color:#007bb6;"></span></a>
-                        <a href="https://twitter.com/juanmanuel_torres" target="_blank"><span class="fa fa-twitter-square" style="font-size:48px; color:#00aced;"></span></a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -106,10 +76,8 @@
     <footer class="text-center white-background">
         <p>&copy;2024 Juan Manuel Torres.</p>
     </footer>
-<!-- Incluye tus scripts de JavaScript al final del body -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Asegúrate de incluir jQuery si aún no lo has hecho -->
-<script src="script.js"></script> <!-- Incluye tu archivo script.js -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
