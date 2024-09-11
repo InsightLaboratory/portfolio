@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #0e0b16; /* Fondo oscuro futurista */
-    color: #282a36;
+    color: #fff;
 }
 
 header {
     background-color: #1f1b2e;
-    color: #fff;
+    color: #282a36;
     padding: 1.5rem;
     text-align: center;
 }
