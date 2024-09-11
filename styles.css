@@ -1,209 +1,142 @@
-/* CSS TOC 
-CH01 Global Styles – (body, paragraphs, lists, etc)
-CH02 Header
-CH03 Page Structure
-CH04 Headings
-CH05 Text Styles
-CH06 Navigation
-CH08 Forms
-CH09 Comments
-CH10 Extras.
-*/
-
-/* CH01 Global Styles */
 body {
-  font-family: 'Open Sans', verdana, arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #0e0b16; /* Fondo oscuro futurista */
+    color: #fff;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.65;
-  margin: 0 0 15px 0;
+header {
+    background-color: #1f1b2e;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
 }
 
-ul {
-  padding: 0;
-  list-style: none;
+.title-container {
+    background-color: #ff2e63;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 46, 99, 0.8);
 }
 
-li {
-  padding-bottom: 5px;
+h1.glitch {
+    font-size: 4rem;
+    color: #ff2e63;
+    text-shadow: 0 0 10px rgba(255, 46, 99, 0.5);
+    position: relative;
 }
 
-img {
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, .1);
-  margin-top: 20px;
-  max-width: 100%;
+.grid-section {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+
+.color-box {
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+    transform: translateY(-10px);
+}
+
+.color-box.pink {
+    background-color: #ff79c6;
+    color: #fff;
+}
+
+.color-box.skyblue {
+    background-color: #8be9fd;
+    color: #fff;
+}
+
+.color-box.neon-green {
+    background-color: #50fa7b;
+    color: #fff;
+}
+
+.color-box.pearl {
+    background-color: #f8f8f2;
+    color: #282a36;
 }
 
 a {
-  color: #61A6AB;
-  text-decoration: none;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* CH02 Header */
-.header-background {
-  background-color: #61A6AB;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
+/* Cubos interactivos */
+.wrapcube {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
 }
 
-.header-background h1 {
-  font-size: 2.5rem;
-  margin: 0;
+.cube {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
 }
 
-.header-background p {
-  font-size: 1.2rem;
-  margin: 5px 0 0;
+.cube .side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #ff2e63;
+    border: 2px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 46, 99, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.5s ease;
 }
 
-/* CH03 Page Structure */
-.container {
-  padding: 20px;
+.cube .front {
+    transform: rotateY(0deg) translateZ(50px);
 }
 
-section {
-  padding: 60px 0;
+.cube .back {
+    transform: rotateY(180deg) translateZ(50px);
 }
 
-.gray-background {
-  background-color: #f0f0f0;
+.cube .left {
+    transform: rotateY(-90deg) translateZ(50px);
 }
 
-.white-background {
-  background-color: #ffffff;
+.cube .right {
+    transform: rotateY(90deg) translateZ(50px);
 }
 
-figure img {
-  width: 100%;
-  margin-bottom: 20px;
+.cube .top {
+    transform: rotateX(90deg) translateZ(50px);
 }
 
-footer {
-  background-color: #61A6AB;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+.cube .bottom {
+    transform: rotateX(-90deg) translateZ(50px);
 }
 
-/* CH04 Headings */
-h1, h2, h3, h4 {
-  font-family: 'Lato', sans-serif;
-  margin: 0 0 20px;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #333;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #333;
-  border-bottom: 2px solid #61A6AB;
-  padding-bottom: 10px;
-}
-
-h3 {
-  font-size: 1.5rem;
-  color: #555;
-}
-
-h4 {
-  font-size: 1.2rem;
-  color: #fff;
-}
-
-/* CH05 Text Styles */
-p {
-  color: #555;
-}
-
-.gray-background ul li:before {
-  content: "\f054"; /* FontAwesome Unicode */
-  font-family: FontAwesome;
-  color: #61A6AB;
-  margin-right: 10px;
-}
-
-/* CH06 Navigation */
-.navbar-default {
-  background-color: #fff;
-  border: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: #333;
-  font-size: 1.2rem;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: #61A6AB;
-}
-
-.navbar-toggle {
-  background-color: #61A6AB;
-  border-color: #61A6AB;
-}
-
-.navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-
-/* CH08 Forms */
-.form-control {
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  font-size: 1rem;
-}
-
-.btn-outline-danger {
-  margin-top: 20px;
-  color: #61A6AB;
-  border: 2px solid #61A6AB;
-  padding: 10px 20px;
-  font-weight: bold;
-  background-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-danger:hover {
-  background-color: #61A6AB;
-  color: #fff;
-  border-color: #61A6AB;
-}
-
-/* CH09 Comments */
-/* Colors:
-   Teal #61A6AB
-   Dark Gray #333
-   Light Gray #f0f0f0
-   White #ffffff
-*/
-
-/* CH10 Extras */
-.social-icons span {
-  font-size: 48px;
-  margin: 10px;
-  color: #61A6AB;
-  transition: color 0.3s;
-}
-
-.social-icons span:hover {
-  color: #333;
+.cube:hover .side {
+    transform: rotateY(360deg);
 }
 
