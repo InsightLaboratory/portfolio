@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #282a36;
+    background-color:#0e0b16;
     color: #282a36;
     padding: 1.5rem;
     text-align: center;
@@ -22,7 +22,7 @@ header {
 
 h1.glitch {
     font-size: 4rem;
-    color: #ff2e63;
+    color: #282a36;
     text-shadow: 0 0 10px rgba(255, 46, 99, 0.5);
     position: relative;
 }
