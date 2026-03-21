@@ -1,27 +1,95 @@
-$(document).ready(function(){
-    // Add scrollspy to <body>
-    $('body').scrollspy({target: ".navbar", offset: 160});   
-  
-    // Add smooth scrolling on all links inside the navbar
-    $("#myNavbar a").on('click', function(event) {
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-  
-        // Store hash
-        var hash = this.hash;
-  
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-     
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      }  // End if
+// Smooth scrolling for navigation links
+$(document).ready(function() {
+    // Smooth scroll on click
+    $('a[href*="#"]').on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - 80
+            }, 800);
+        }
     });
-  });
+
+    // Scroll spy - highlight active section
+    $(window).on('scroll', function() {
+        var scrollPos = $(document).scrollTop();
+        
+        $('section').each(function() {
+            var sectionOffset = $(this).offset().top;
+            var sectionHeight = $(this).height();
+            
+            if (scrollPos >= sectionOffset - 100 && scrollPos < sectionOffset + sectionHeight - 100) {
+                $('a[href*="#' + $(this).attr('id') + '"]').addClass('active');
+            } else {
+                $('a[href*="#' + $(this).attr('id') + '"]').removeClass('active');
+            }
+        });
+    });
+
+    // Form validation
+    $('form').on('submit', function(e) {
+        var name = $('#name').val().trim();
+        var email = $('#email').val().trim();
+        var message = $('#message').val().trim();
+
+        if (!name || !email || !message) {
+            e.preventDefault();
+            alert('Please fill in all required fields.');
+            return false;
+        }
+
+        if (!isValidEmail(email)) {
+            e.preventDefault();
+            alert('Please enter a valid email address.');
+            return false;
+        }
+    });
+
+    // Email validation helper
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    // Add animation on scroll
+    observeElements();
+});
+
+// Intersection Observer for scroll animations
+function observeElements() {
+    var options = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                $(entry.target).addClass('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    $('.skill-card, .project-card, .expertise-card, .tech-section').each(function() {
+        observer.observe(this);
+    });
+}
+
+// Add CSS for animation
+var style = $('<style>').text(`
+    .skill-card, .project-card, .expertise-card, .tech-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .animate-in {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`);
+$('head').append(style);
+
   
