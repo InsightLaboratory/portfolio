@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "featured": "Featured Project",
+    "projects": "Other Projects",
+    "expertise": "Expertise",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "📍 Argentina | Full-Stack Geospatial Engineer",
+    "title": "Juan Manuel Torres",
+    "subtitle": "Geospatial Developer & Full-Stack Engineer",
+    "description": "Building production-ready platforms for mineral exploration, geospatial analysis, and interactive data visualization. Expertise in Python APIs, React frontends, PostgreSQL/PostGIS databases, and cloud deployment.",
+    "btnFeatured": "Featured Project",
+    "btnGitHub": "GitHub Profile",
+    "btnLinkedIn": "LinkedIn"
+  },
+  "skills": {
+    "title": "Technical Expertise",
+    "backend": {
+      "title": "Backend Development",
+      "desc": "Python • FastAPI • Uvicorn • Connection Pooling"
+    },
+    "frontend": {
+      "title": "Frontend Development",
+      "desc": "React 18 • TypeScript • Vite • Shadcn/ui • Tailwind CSS"
+    },
+    "geospatial": {
+      "title": "Geospatial Technologies",
+      "desc": "PostGIS • Leaflet.js • GDAL • GeoPandas • OpenStreetMap"
+    },
+    "database": {
+      "title": "Databases",
+      "desc": "PostgreSQL 15+ • Supabase • PostGIS 3.4+ • SQL Optimization"
+    },
+    "cloud": {
+      "title": "Cloud Deployment",
+      "desc": "Render.com • Vercel • Supabase Cloud • CORS & SSL"
+    },
+    "data": {
+      "title": "Data Analysis",
+      "desc": "Mineral Exploration • GeoJSON • Data Visualization • Recharts"
+    }
+  },
+  "featured": {
+    "title": "🌍 Featured Project: GEO-PLATFORM v3.0",
+    "statusLive": "✅ Live in Production",
+    "statusUpdated": "Updated March 2026",
+    "projectTitle": "Production-Ready Mineral Exploration Platform",
+    "description": "A comprehensive full-stack platform for geologists and mining professionals to explore, analyze, and visualize mineral exploration data in real-time. Includes interactive mapping, assay analysis, and geochemical pattern recognition.",
+    "features": "Key Features:",
+    "featureList": [
+      "🗺️ Real-time drillhole locations with interactive React-Leaflet maps",
+      "📊 Assay data visualization with depth-grade relationships",
+      "📍 GeoJSON spatial analysis with PostGIS queries",
+      "🌙 Dark/Light mode toggle with persistent theming",
+      "📈 Interactive Recharts with Au (gold) grade rankings",
+      "🔍 Smart search & filter panel for drillhole discovery",
+      "⚡ Type-safe API integration (TypeScript + Axios)",
+      "📱 Fully responsive design (Mobile to Desktop)"
+    ],
+    "btnLiveDemo": "🚀 Explore Live Demo",
+    "btnAPI": "📡 API Documentation",
+    "btnCode": "💾 View Source Code",
+    "stackTitle": "Complete Tech Stack",
+    "backendInfra": "Backend Infrastructure",
+    "backendItems": [
+      "FastAPI 0.104.1 (Python 3.11.9)",
+      "Connection Pooling (2-10 connections)",
+      "9 RESTful API Endpoints",
+      "CORS Enabled & Logging",
+      "Deployed on Render.com"
+    ],
+    "frontendFrame": "Frontend Framework",
+    "frontendItems": [
+      "React 18 + TypeScript",
+      "Vite 5.4.21 (Ultra-fast builds)",
+      "Shadcn/ui Components",
+      "Tailwind CSS Styling",
+      "Deployed on Vercel"
+    ],
+    "geospatialData": "Geospatial & Data",
+    "geospatialItems": [
+      "PostgreSQL 15 + PostGIS 3.4+",
+      "Supabase Cloud Hosting",
+      "30+ Database Tables",
+      "13 Analytical Views",
+      "UUID Primary Keys (Distributed)"
+    ],
+    "visualization": "Visualization & Mapping",
+    "vizItems": [
+      "React-Leaflet 4.2",
+      "OpenStreetMap Tiles",
+      "Recharts for Analytics",
+      "GeoJSON Features",
+      "Interactive Popups"
+    ],
+    "datasetScale": "Dataset Scale",
+    "drillholes": "4 Drillholes",
+    "samples": "~1,200 Samples",
+    "assays": "682 Assay Results",
+    "apiPerf": "API Performance",
+    "endpoints": "9 Endpoints",
+    "pagination": "Pagination Support",
+    "realtime": "Real-time Updates",
+    "dbModel": "Database Model",
+    "tables": "30+ Tables",
+    "postgis": "PostGIS Geometry",
+    "normalized": "Normalized Schema",
+    "frontendComp": "Frontend Components",
+    "hero": "Hero Section",
+    "mapExp": "Map Explorer",
+    "dataAnal": "Data Analytics"
+  },
+  "otherProjects": {
+    "title": "Other Projects & Contributions",
+    "geeApps": {
+      "title": "🛰️ Google Earth Engine Applications",
+      "badge": "JavaScript • Geospatial Analysis",
+      "description": "Interactive applications for large-scale geospatial analysis using Google Earth Engine's cloud computing platform.",
+      "featured": "Featured Applications:",
+      "app1": "Highest-Points-of-Argentina-Glaciar-Hydro-DEM: 3D visualization of Andean peaks with glacier, hydrology, and geological structure layers. Interactive DEM exploration of 4,000+ meter elevations.",
+      "app2": "Cordobaengine: Analysis of Sierra Pampeanas topography with DEM models, surface hydrography, and geological formations.",
+      "tech": "Tech: JavaScript API, Landsat imagery, PostGIS geometry, Data Catalog"
+    },
+    "portfolio": {
+      "title": "🌐 InsightLab Portfolio",
+      "badge": "Web Development • Science Communication",
+      "description": "A portfolio website showcasing geospatial resources, scientific tools, and technological innovations in earth science.",
+      "featured": "Featured Resources:",
+      "resources": [
+        "Ventusky: Real-time weather data visualization",
+        "OpenStreetMap: Collaborative geographic mapping platform",
+        "Gaia GPS: Precision mapping for outdoor activities & geosciences",
+        "Asterank & Galaxies: Space data exploration (600K+ asteroids)",
+        "Paleobiology Database: Fossil records and biodiversity research"
+      ],
+      "tech": "Tech: HTML/CSS, Scientific communication, Data curation"
+    }
+  },
+  "expertise": {
+    "title": "Domain Expertise",
+    "geospatial": {
+      "title": "🗺️ Geospatial Analysis",
+      "desc": "PostGIS, GDAL, GeoPandas, coordinate systems (EPSG:4326), spatial queries, geometric operations, GeoJSON formatting"
+    },
+    "mineral": {
+      "title": "💰 Mineral Exploration",
+      "desc": "Drillhole data modeling, assay analysis, grade estimation, domain interpretation, lithology/alteration/mineralization logging"
+    },
+    "architecture": {
+      "title": "🏗️ Full-Stack Architecture",
+      "desc": "Scalable API design, database optimization, responsive frontend, cloud deployment, production monitoring"
+    },
+    "database": {
+      "title": "💾 Database Design",
+      "desc": "Normalized schemas, UUID primary keys, interval-based modeling (numrange), EXCLUDE constraints, analytical views, query optimization"
+    },
+    "visualization": {
+      "title": "📊 Data Visualization",
+      "desc": "Interactive maps (Leaflet), charts (Recharts), dark mode theming, responsive design, real-time data updates"
+    },
+    "devops": {
+      "title": "☁️ Cloud DevOps",
+      "desc": "Render deployment, Vercel CI/CD, Supabase management, environment configuration, auto-scaling"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "intro": "Interested in discussing geospatial projects, mineral exploration platforms, or full-stack development? Let's collaborate.",
+    "formTitle": "Send a Message",
+    "name": "Name *",
+    "namePlaceholder": "Your Name",
+    "email": "Email *",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject *",
+    "subjectPlaceholder": "Project inquiry",
+    "message": "Message *",
+    "messagePlaceholder": "Tell me about your project...",
+    "btnSend": "Send Message",
+    "infoTitle": "Connect With Me",
+    "interestedIn": "Interested In:",
+    "interests": [
+      "Geospatial Data Platforms",
+      "Mineral Exploration Tech",
+      "Full-Stack Development",
+      "API Architecture & Design",
+      "PostgreSQL/PostGIS Optimization",
+      "React/TypeScript Projects"
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Juan Manuel Torres. Geospatial Engineer & Full-Stack Developer.",
+    "updated": "Last Updated: March 2026 | All projects are production-ready and actively maintained."
+  }
+}

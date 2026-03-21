@@ -2,7 +2,20 @@
 
 **Geospatial Engineer & Full-Stack Developer**
 
+> Modern, bilingual portfolio built with React, Vite, TypeScript, and Material-UI. Showcasing geospatial projects and full-stack development expertise.
+
 ---
+
+## 🚀 Stack & Features
+
+- ⚡ **Vite** - Ultra-fast build tool & development server
+- ⚛️ **React 18** - Modern UI library with hooks
+- 🎨 **Material-UI 5** - Professional component library with theming
+- 📘 **TypeScript** - Full type safety
+- 🌐 **i18n Support** - Bilingual (Spanish/English) with localStorage persistence
+- 🌙 **Dark/Light Theme** - Toggle with automatic persistence
+- 📱 **Responsive Design** - Mobile-first, works on all devices
+- 🚀 **GitHub Pages** - Deployed to `https://insightlaboratory.github.io/portfolio/`
 
 ## 👋 Overview
 
