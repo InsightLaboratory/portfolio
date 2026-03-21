@@ -18,6 +18,20 @@ Thumbs.db
 dist/
 build/
 *.min.js
+
+# Legacy files (old portfolio)
+index.html
+404.html
+robots.txt
+sitemap.xml
+styles.css
+script.js
+PORTFOLIO_README.md
+PORTFOLIO_README_EN.md
+PRODUCTION_READY.md
+EVIDENCE_ANALYSIS.md
+GITHUB_PAGES_SETUP.md
+
 *.min.css
 
 # Environment
