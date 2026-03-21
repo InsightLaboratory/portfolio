@@ -3,6 +3,8 @@
 **Geospatial Engineer & Full-Stack Developer**
 
 > Modern, bilingual portfolio built with React, Vite, TypeScript, and Material-UI. Showcasing geospatial projects and full-stack development expertise.
+>
+> 🔄 **Deployment Status**: GitHub Actions CI/CD active
 
 ---
 
