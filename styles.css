@@ -12,15 +12,24 @@ body {
 header {
     background-color: #f8f8f8; /* Fondo claro */
     color: #837f7f; /* Color de texto gris suave */
-    padding: 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
 .title-container {
     background-color: #f8f8f8; /* Fondo claro */
-    padding: 1rem;
+    padding: 2.5rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* Sombra más sutil pero perceptible */
+}
+
+h2.glitch {
+    font-size: 2.8rem;
+    color: #837f7f; /* Gris suave */
+    text-shadow: 0 0 5px rgba(131, 127, 127, 0.5); /* Sombra leve */
+    position: relative;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
 }
 
 h1.glitch {
@@ -30,8 +39,23 @@ h1.glitch {
     position: relative;
 }
 
+.subtitle-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 1rem 0 2rem 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .grid-section {
-    padding: 2rem;
+    padding: 3.5rem 2rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,21 +64,34 @@ h1.glitch {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 2rem;
     width: 80%;
 }
 
 .color-box {
-    padding: 1.5rem;
+    padding: 2rem;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     background-color: #FFFFFF; /* Fondo blanco */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-box h3 {
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+}
+
+.color-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
 }
 
 .color-box:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .color-box.pink, 
@@ -75,6 +112,144 @@ a:hover {
     text-decoration: underline;
 }
 
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #3b78e7;
+    color: #fff;
+    padding: 14px 32px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #2a5ab8;
+    box-shadow: 0 4px 12px rgba(59, 120, 231, 0.3);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #3b78e7;
+    border: 2px solid #3b78e7;
+    padding: 12px 30px;
+    font-size: 1rem;
+}
+
+.btn-secondary:hover {
+    background-color: #3b78e7;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-demo {
+    background-color: #3b78e7;
+    color: #fff;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.btn-demo:hover {
+    background-color: #2a5ab8;
+    box-shadow: 0 4px 12px rgba(59, 120, 231, 0.3);
+    text-decoration: none;
+}
+
+/* Featured Project Section */
+.featured-project-section {
+    padding: 3.5rem 2rem;
+    background-color: #ffffff;
+    margin: 1.5rem 0;
+}
+
+.featured-project-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.featured-image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.featured-content h2 {
+    font-size: 2rem;
+    margin: 0 0 1.5rem 0;
+    color: #424242;
+    font-weight: 700;
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #666;
+    margin: 0 0 1.5rem 0;
+}
+
+.tech-stack {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.tech-stack h4 {
+    font-size: 1rem;
+    margin: 0 0 1rem 0;
+    color: #424242;
+    font-weight: 600;
+}
+
+.tech-stack ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-stack li {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+}
+
+.tech-stack li:before {
+    content: "▪";
+    position: absolute;
+    left: 0;
+    color: #3b78e7;
+    font-weight: 600;
+}
+
+.pull-right {
+    float: right;
+}
+
 /* Contact Form Styles */
 .container {
     max-width: 1200px;
@@ -85,7 +260,8 @@ a:hover {
 .gray-background {
     background-color: #f1f1f1;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 1.5rem;
 }
 
 .form-group {
@@ -95,6 +271,8 @@ a:hover {
 
 .form-group label {
     margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
 .form-group input,
@@ -108,30 +286,6 @@ a:hover {
 
 .form-group textarea {
     resize: vertical;
-}
-
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.btn-outline-danger {
-    background-color: transparent;
-    color: #dc3545;
-    border: 1px solid #dc3545;
-}
-
-.btn-outline-danger:hover {
-    background-color: #dc3545;
-    color: #fff;
-}
-
-.pull-right {
-    float: right;
 }
 
 footer {
@@ -163,5 +317,36 @@ main {
 
     .col-xs-12 {
         width: 100%;
+    }
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    .title-container {
+        padding: 1.5rem;
+    }
+
+    h2.glitch {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .featured-project-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .featured-image-placeholder img {
+        max-width: 100%;
     }
 }
