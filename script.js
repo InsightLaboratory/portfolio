@@ -1,5 +1,27 @@
+// Dark Mode Toggle
+function initDarkMode() {
+    // Check if user has preference saved
+    const savedMode = localStorage.getItem('themeMode');
+    
+    if (savedMode === 'light') {
+        document.body.classList.add('light-mode');
+    }
+    
+    // Listen for system preference changes
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (e.matches && !savedMode) {
+            document.body.classList.add('light-mode');
+        } else if (!e.matches && !savedMode) {
+            document.body.classList.remove('light-mode');
+        }
+    });
+}
+
 // Smooth scrolling for navigation links
 $(document).ready(function() {
+    // Initialize dark mode
+    initDarkMode();
+    
     // Smooth scroll on click
     $('a[href*="#"]').on('click', function(event) {
         if (this.hash !== "") {

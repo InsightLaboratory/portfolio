@@ -1,5 +1,22 @@
-/* Color Scheme & Variables */
+/* Color Scheme & Variables - Dark Mode by Default */
 :root {
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary-color: #a78bfa;
+    --accent-color: #22d3ee;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-bg: #1f2937;
+    --dark-bg: #0f172a;
+    --border-color: #374151;
+    --text-primary: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-light: #9ca3af;
+}
+
+/* Light Mode (Optional Variant) */
+body.light-mode {
     --primary-color: #2563eb;
     --primary-dark: #1e40af;
     --secondary-color: #7c3aed;
@@ -30,7 +47,7 @@ body {
     font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background-color: #ffffff;
+    background-color: var(--dark-bg);
 }
 
 /* Container */
@@ -42,18 +59,19 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
     padding: 4rem 1.5rem;
     text-align: center;
     border-bottom: 2px solid var(--primary-color);
 }
 
 .title-container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(31, 41, 55, 0.6);
     padding: 3rem 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
 }
 
 .header-badge {
@@ -170,7 +188,7 @@ h2.glitch {
 /* Skills Section */
 .skills-section {
     padding: 4rem 0;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
     border-top: 1px solid var(--border-color);
 }
 
@@ -188,11 +206,11 @@ h2.glitch {
 }
 
 .skill-card {
-    background: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: 10px;
     border-left: 4px solid var(--primary-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -217,7 +235,7 @@ h2.glitch {
 /* Featured Project Section */
 .featured-project-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
     border-top: 2px solid var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
@@ -312,10 +330,11 @@ h2.glitch {
 }
 
 .featured-tech {
-    background: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
 }
 
 .featured-tech h4 {
@@ -359,10 +378,11 @@ h2.glitch {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    background: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
 }
 
 .stat-item {
@@ -404,10 +424,10 @@ h2.glitch {
 }
 
 .project-card {
-    background: white;
+    background: var(--light-bg);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
     display: flex;
@@ -479,9 +499,11 @@ h2.glitch {
 
 .tech-list {
     padding: 1rem 1.5rem;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
     font-size: 0.9rem;
     color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .tech-list strong {
@@ -506,7 +528,7 @@ h2.glitch {
 /* Expertise Section */
 .expertise-section {
     padding: 4rem 0;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
 }
 
 .expertise-section h2 {
@@ -523,12 +545,13 @@ h2.glitch {
 }
 
 .expertise-card {
-    background: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     border-top: 3px solid var(--accent-color);
     transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .expertise-card:hover {
@@ -551,7 +574,7 @@ h2.glitch {
 /* Contact Section */
 .contact-section {
     padding: 4rem 0;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.03) 0%, rgba(124, 58, 237, 0.03) 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
 }
 
 .contact-section h2 {
@@ -583,10 +606,11 @@ h2.glitch {
 
 .contact-form,
 .contact-info {
-    background: white;
+    background: var(--light-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -608,6 +632,8 @@ h2.glitch {
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: inherit;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
 }
 
 .form-control:focus {
@@ -633,12 +659,12 @@ h2.glitch {
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
     color: var(--primary-color);
     text-decoration: none;
     border-radius: 6px;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--primary-color);
 }
 
 .social-link:hover {
@@ -675,8 +701,9 @@ h2.glitch {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
+    background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
+    color: var(--text-primary);
+    border-top: 2px solid var(--primary-color);
     padding: 2rem;
     text-align: center;
     margin-top: 4rem;
@@ -693,6 +720,7 @@ footer a {
 }
 
 footer a:hover {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
