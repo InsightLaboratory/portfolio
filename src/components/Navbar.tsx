@@ -8,13 +8,23 @@ import {
   Box,
   ToggleButton,
   ToggleButtonGroup,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Divider,
+  useMediaQuery,
 } from '@mui/material';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isDark, setIsDark] = useState(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -33,8 +43,52 @@ export default function Navbar() {
     setIsDark(!isDark);
     localStorage.setItem('theme', newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
-    window.location.reload(); // Reload to apply theme
+    window.location.reload();
   };
+
+  const navLinks = [
+    { label: t('nav.featured'), href: '#featured' },
+    { label: t('nav.projects'), href: '#projects' },
+    { label: t('nav.expertise'), href: '#expertise' },
+    { label: t('nav.contact'), href: '#contact' },
+  ];
+
+  const drawer = (
+    <Box sx={{ width: 260, pt: 2 }}>
+      <Box sx={{ px: 2, pb: 2, fontWeight: 700, fontSize: '1.2rem' }}>
+        Juan M. Torres
+      </Box>
+      <Divider />
+      <List>
+        {navLinks.map((link) => (
+          <ListItem key={link.href} disablePadding>
+            <ListItemButton
+              component="a"
+              href={link.href}
+              onClick={() => setDrawerOpen(false)}
+            >
+              <ListItemText primary={link.label} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, py: 2 }}>
+        <ToggleButtonGroup
+          value={i18n.language}
+          exclusive
+          onChange={handleLanguageChange}
+          size="small"
+        >
+          <ToggleButton value="es">ES</ToggleButton>
+          <ToggleButton value="en">EN</ToggleButton>
+        </ToggleButtonGroup>
+        <Button variant="outlined" size="small" onClick={handleThemeToggle}>
+          {isDark ? '☀️' : '🌙'}
+        </Button>
+      </Box>
+    </Box>
+  );
 
   return (
     <AppBar
@@ -54,44 +108,57 @@ export default function Navbar() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
+            minHeight: { xs: 56, md: 64 },
           }}
         >
           <Box sx={{ fontWeight: 700, fontSize: '1.3rem' }}>Juan M. Torres</Box>
 
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-            <ToggleButtonGroup
-              value={i18n.language}
-              exclusive
-              onChange={handleLanguageChange}
-              size="small"
-            >
-              <ToggleButton value="es">ES</ToggleButton>
-              <ToggleButton value="en">EN</ToggleButton>
-            </ToggleButtonGroup>
+          {/* Desktop nav */}
+          {!isMobile && (
+            <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+              <ToggleButtonGroup
+                value={i18n.language}
+                exclusive
+                onChange={handleLanguageChange}
+                size="small"
+              >
+                <ToggleButton value="es">ES</ToggleButton>
+                <ToggleButton value="en">EN</ToggleButton>
+              </ToggleButtonGroup>
 
-            <Button color="inherit" href="#featured">
-              {t('nav.featured')}
-            </Button>
-            <Button color="inherit" href="#projects">
-              {t('nav.projects')}
-            </Button>
-            <Button color="inherit" href="#expertise">
-              {t('nav.expertise')}
-            </Button>
-            <Button color="inherit" href="#contact">
-              {t('nav.contact')}
-            </Button>
+              {navLinks.map((link) => (
+                <Button key={link.href} color="inherit" href={link.href}>
+                  {link.label}
+                </Button>
+              ))}
 
-            <Button
-              variant="outlined"
-              size="small"
-              onClick={handleThemeToggle}
+              <Button variant="outlined" size="small" onClick={handleThemeToggle}>
+                {isDark ? '☀️' : '🌙'}
+              </Button>
+            </Box>
+          )}
+
+          {/* Mobile hamburger */}
+          {isMobile && (
+            <IconButton
+              color="inherit"
+              edge="end"
+              onClick={() => setDrawerOpen(true)}
+              sx={{ fontSize: '1.5rem' }}
             >
-              {isDark ? '☀️' : '🌙'}
-            </Button>
-          </Box>
+              ☰
+            </IconButton>
+          )}
         </Toolbar>
       </Container>
+
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        {drawer}
+      </Drawer>
     </AppBar>
   );
 }

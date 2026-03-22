@@ -19,8 +19,8 @@ export default function HeroSection() {
           theme.palette.mode === 'dark'
             ? 'linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%)'
             : 'linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)',
-        py: 12,
-        minHeight: '70vh',
+        py: { xs: 6, md: 12 },
+        minHeight: { xs: '60vh', md: '70vh' },
         display: 'flex',
         alignItems: 'center',
       }}
@@ -37,7 +37,7 @@ export default function HeroSection() {
         </Typography>
         <Typography
           variant="body1"
-          sx={{ maxWidth: '700px', mx: 'auto', mb: 4, fontSize: '1.1rem', textAlign: 'center' }}
+          sx={{ maxWidth: '700px', mx: 'auto', mb: 4, fontSize: { xs: '0.95rem', md: '1.1rem' }, px: { xs: 1, md: 0 }, textAlign: 'center' }}
         >
           {t('hero.description')}
         </Typography>
