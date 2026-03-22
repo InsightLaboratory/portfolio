@@ -9,9 +9,22 @@ html {
 }
 
 body {
-  font-family: 'Google Sans', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  letter-spacing: -0.5px;
+}
+
+p {
+  line-height: 1.6;
 }
 
 code {

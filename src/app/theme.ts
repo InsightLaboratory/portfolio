@@ -1,5 +1,42 @@
 import { createTheme } from '@mui/material/styles';
 
+const sharedTypography = {
+  fontFamily: '"Inter", sans-serif',
+  h1: {
+    fontFamily: '"Space Grotesk", sans-serif',
+    fontSize: '3.5rem',
+    fontWeight: 600,
+    lineHeight: 1.2,
+    letterSpacing: '-0.5px',
+  },
+  h2: {
+    fontFamily: '"Space Grotesk", sans-serif',
+    fontSize: '2.5rem',
+    fontWeight: 600,
+    lineHeight: 1.3,
+  },
+  h3: {
+    fontFamily: '"Space Grotesk", sans-serif',
+    fontSize: '1.875rem',
+    fontWeight: 600,
+    lineHeight: 1.4,
+  },
+  h4: {
+    fontFamily: '"Space Grotesk", sans-serif',
+    fontSize: '1.5rem',
+    fontWeight: 600,
+    lineHeight: 1.4,
+  },
+  body1: {
+    fontSize: '1rem',
+    lineHeight: 1.6,
+  },
+  body2: {
+    fontSize: '0.875rem',
+    lineHeight: 1.6,
+  },
+};
+
 export const lightTheme = createTheme({
   palette: {
     mode: 'light',
@@ -22,37 +59,7 @@ export const lightTheme = createTheme({
       secondary: '#757575',
     },
   },
-  typography: {
-    fontFamily: '"Google Sans", "Roboto", "Helvetica", "Arial", sans-serif',
-    h1: {
-      fontSize: '3.5rem',
-      fontWeight: 700,
-      lineHeight: 1.2,
-    },
-    h2: {
-      fontSize: '2.5rem',
-      fontWeight: 700,
-      lineHeight: 1.3,
-    },
-    h3: {
-      fontSize: '1.875rem',
-      fontWeight: 600,
-      lineHeight: 1.4,
-    },
-    h4: {
-      fontSize: '1.5rem',
-      fontWeight: 600,
-      lineHeight: 1.4,
-    },
-    body1: {
-      fontSize: '1rem',
-      lineHeight: 1.6,
-    },
-    body2: {
-      fontSize: '0.875rem',
-      lineHeight: 1.6,
-    },
-  },
+  typography: sharedTypography,
   shape: {
     borderRadius: 8,
   },
@@ -116,37 +123,7 @@ export const darkTheme = createTheme({
       secondary: '#b0bec5',
     },
   },
-  typography: {
-    fontFamily: '"Google Sans", "Roboto", "Helvetica", "Arial", sans-serif',
-    h1: {
-      fontSize: '3.5rem',
-      fontWeight: 700,
-      lineHeight: 1.2,
-    },
-    h2: {
-      fontSize: '2.5rem',
-      fontWeight: 700,
-      lineHeight: 1.3,
-    },
-    h3: {
-      fontSize: '1.875rem',
-      fontWeight: 600,
-      lineHeight: 1.4,
-    },
-    h4: {
-      fontSize: '1.5rem',
-      fontWeight: 600,
-      lineHeight: 1.4,
-    },
-    body1: {
-      fontSize: '1rem',
-      lineHeight: 1.6,
-    },
-    body2: {
-      fontSize: '0.875rem',
-      lineHeight: 1.6,
-    },
-  },
+  typography: sharedTypography,
   shape: {
     borderRadius: 8,
   },
