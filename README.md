@@ -2,28 +2,60 @@
 
 **Geospatial Engineer & Full-Stack Developer**
 
-> Modern, bilingual portfolio built with React, Vite, TypeScript, and Material-UI. Showcasing geospatial projects and full-stack development expertise.
+> Modern, bilingual portfolio built with React 18, Vite 5, TypeScript, and Material-UI 5. Showcasing geospatial projects and full-stack development expertise.
 >
-> 🔄 **Deployment Status**: GitHub Actions CI/CD active
+> 🌐 **Live:** [insightlaboratory.github.io/portfolio](https://insightlaboratory.github.io/portfolio/)
 
 ---
 
 ## 🚀 Stack & Features
 
-- ⚡ **Vite** - Ultra-fast build tool & development server
-- ⚛️ **React 18** - Modern UI library with hooks
-- 🎨 **Material-UI 5** - Professional component library with theming
-- 📘 **TypeScript** - Full type safety
-- 🌐 **i18n Support** - Bilingual (Spanish/English) with localStorage persistence
-- 🌙 **Dark/Light Theme** - Toggle with automatic persistence
-- 📱 **Responsive Design** - Mobile-first, works on all devices
-- 🚀 **GitHub Pages** - Deployed to `https://insightlaboratory.github.io/portfolio/`
+| Category | Technologies |
+|----------|-------------|
+| ⚡ Build | Vite 5.0 — ultra-fast HMR & production builds |
+| ⚛️ UI | React 18 + TypeScript 5.2 |
+| 🎨 Components | Material-UI 5.14 + Emotion |
+| ✏️ Typography | Space Grotesk (headings) + Inter (body) via Google Fonts |
+| 🌐 i18n | react-i18next — ES/EN with localStorage persistence |
+| 🌙 Theming | Dark mode (default) / Light mode toggle |
+| 📱 Responsive | Mobile-first with hamburger menu, `clamp()` typography, adaptive padding |
+| 🚀 Hosting | GitHub Pages via `gh-pages` branch |
 
-## 👋 Overview
+---
 
-Professional portfolio showcasing expertise in full-stack development with specialization in geospatial platforms for mineral exploration.
+## 📁 Project Structure
 
-### 🌟 Featured Project: GEO-PLATFORM v3.0
+```
+portfolio-work/
+├── index.html                # Entry point (Google Fonts, meta tags)
+├── vite.config.ts            # base: '/portfolio/'
+├── package.json              # Dependencies & scripts
+├── src/
+│   ├── main.tsx              # React root
+│   ├── App.tsx               # ThemeProvider + dark mode state
+│   ├── index.css             # Global styles, scrollbar, selection
+│   ├── app/
+│   │   └── theme.ts          # Light/Dark MUI themes, shared typography
+│   ├── components/
+│   │   └── Navbar.tsx        # Responsive navbar with Drawer (mobile)
+│   ├── sections/
+│   │   ├── HeroSection.tsx
+│   │   ├── SkillsSection.tsx
+│   │   ├── FeaturedProjectSection.tsx
+│   │   ├── OtherProjectsSection.tsx
+│   │   ├── ExpertiseSection.tsx
+│   │   ├── ContactSection.tsx   # Formspree integration
+│   │   └── Footer.tsx
+│   └── i18n/
+│       ├── index.ts          # i18next config
+│       ├── es.json           # Spanish translations
+│       └── en.json           # English translations
+└── legacy/                   # Original static HTML/CSS/JS
+```
+
+---
+
+## 🌟 Featured Project: GEO-PLATFORM v3.0
 
 A production-ready mineral exploration platform featuring:
 
@@ -32,6 +64,14 @@ A production-ready mineral exploration platform featuring:
 - **Database:** PostgreSQL 15 + PostGIS 3.4+ on Supabase
 - **Geospatial:** Interactive maps, assay analytics, domain visualization
 
+| Metric | Value |
+|--------|-------|
+| Drillholes | 4 |
+| Samples | ~1,200 |
+| Assay Results | 682 |
+| API Endpoints | 9 |
+| DB Tables | 30+ |
+
 **Live Links:**
 - 🚀 [Explore Demo](https://geo-platform-axhipqo2p-juanmanueltorres-creators-projects.vercel.app)
 - 📡 [API Documentation](https://geo-plataform.onrender.com)
@@ -39,84 +79,27 @@ A production-ready mineral exploration platform featuring:
 
 ---
 
-## 💼 Technical Skills
+## 🛠️ Local Development
 
-### Backend Development
-- **Python** • FastAPI • Uvicorn • Connection Pooling
-
-### Frontend Development
-- **React 18** • TypeScript • Vite • Shadcn/ui • Tailwind CSS
-
-### Geospatial Technologies
-- **PostGIS** • Leaflet.js • GDAL • GeoPandas • OpenStreetMap
-
-### Databases
-- **PostgreSQL 15+** • Supabase • PostGIS 3.4+ • SQL Optimization
-
-### Cloud & DevOps
-- **Render.com** • Vercel • Supabase Cloud • CORS & SSL
-
----
-
-## 📊 Projects
-
-### 1️⃣ GEO-PLATFORM v3.0 
-**Status:** ✅ Live in Production (March 2026)
-
-A comprehensive mineral exploration platform with:
-- 9 REST API endpoints
-- 30+ database tables
-- 13 analytical SQL views
-- Interactive React frontend
-- Real-time geospatial data
-
-**Dataset:** 4 Drillholes | ~1,200 Samples | 682 Assay Results
-
-### 2️⃣ Google Earth Engine Applications
-**Technologies:** JavaScript • Geospatial Analysis
-
-- Highest-Points-of-Argentina-Glaciar-Hydro-DEM (3D Andes analysis)
-- Cordobaengine (Sierra Pampeanas topography)
-
-[View on GitHub](https://github.com/InsightLaboratory/MisAplicaciones)
-
-### 3️⃣ InsightLab Website
-**Portfolio & Science Communication**
-
-Geospatial and scientific tools showcase
-
-[Visit Website](https://insightlaboratory.github.io)
-
----
-
-## 🚀 Getting Started
-
-### View Locally
-
-**Option 1 - Live Server (VS Code)**
 ```bash
-# Right-click index.html → "Open with Live Server"
+cd portfolio-work
+npm install --legacy-peer-deps
+npm run dev          # http://localhost:5173/portfolio/
 ```
 
-**Option 2 - Direct Browser**
+## 🚀 Build & Deploy
+
 ```bash
-# Navigate to portfolio-work/ → Double-click index.html
+# 1. Build
+npm install --legacy-peer-deps
+npx tsc -b
+npx vite build
+
+# 2. Deploy to gh-pages
+# Copy dist → temp, switch to gh-pages, replace files, push, return to main
 ```
 
-**Option 3 - Python Server**
-```bash
-cd portfolio-work/
-python -m http.server 8000
-# Visit http://localhost:8000
-```
-
----
-
-## 📱 Live Portfolio
-
-**View Online:** https://github.com/InsightLaboratory/portfolio
-
-**GitHub Pages:** Coming soon
+> **Note:** GitHub Actions is currently blocked by an org billing issue. Deploy manually via the `gh-pages` branch.
 
 ---
 
@@ -125,7 +108,8 @@ python -m http.server 8000
 - 🔗 [GitHub](https://github.com/InsightLaboratory)
 - 💼 [LinkedIn](https://www.linkedin.com/in/juanmtorres23/)
 - 🌐 [InsightLab](https://insightlaboratory.github.io)
+- 📧 Contact form on the [portfolio site](https://insightlaboratory.github.io/portfolio/#contact)
 
 ---
 
-**Last Updated:** March 2026 | **Status:** ✅ Production Ready
+**Last Updated:** March 2026 | **Status:** ✅ Production Ready & Live
