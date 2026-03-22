@@ -154,8 +154,8 @@ export default function FeaturedProjectSection() {
 
         {/* Stats */}
         <Grid container spacing={2} sx={{ mt: 4 }}>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={3}>
+            <Card sx={{ height: '100%' }}>
               <CardContent sx={{ textAlign: 'center' }}>
                 <Typography color="primary" sx={{ fontSize: '1.5rem', fontWeight: 700 }}>
                   {t('featured.datasetScale')}
@@ -166,8 +166,8 @@ export default function FeaturedProjectSection() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={3}>
+            <Card sx={{ height: '100%' }}>
               <CardContent sx={{ textAlign: 'center' }}>
                 <Typography color="primary" sx={{ fontSize: '1.5rem', fontWeight: 700 }}>
                   {t('featured.apiPerf')}
@@ -178,8 +178,8 @@ export default function FeaturedProjectSection() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={3}>
+            <Card sx={{ height: '100%' }}>
               <CardContent sx={{ textAlign: 'center' }}>
                 <Typography color="primary" sx={{ fontSize: '1.5rem', fontWeight: 700 }}>
                   {t('featured.dbModel')}
@@ -190,8 +190,8 @@ export default function FeaturedProjectSection() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Card>
+          <Grid item xs={6} sm={6} md={3}>
+            <Card sx={{ height: '100%' }}>
               <CardContent sx={{ textAlign: 'center' }}>
                 <Typography color="primary" sx={{ fontSize: '1.5rem', fontWeight: 700 }}>
                   {t('featured.frontendComp')}
