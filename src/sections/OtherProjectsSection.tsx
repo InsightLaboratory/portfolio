@@ -20,14 +20,14 @@ export default function OtherProjectsSection() {
   return (
     <Box id="projects" sx={{ py: 8 }}>
       <Container maxWidth="lg">
-        <Typography variant="h2" sx={{ mb: 6, fontWeight: 700 }}>
+        <Typography variant="h2" sx={{ mb: 6, fontWeight: 700, textAlign: 'center' }}>
           {t('otherProjects.title')}
         </Typography>
 
         <Grid container spacing={4}>
           {/* Google Earth Engine */}
           <Grid item xs={12} md={6}>
-            <Card sx={{ h: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                   <Typography variant="h4" sx={{ flexGrow: 1 }}>
@@ -71,7 +71,7 @@ export default function OtherProjectsSection() {
 
           {/* InsightLab Portfolio */}
           <Grid item xs={12} md={6}>
-            <Card sx={{ h: '100%', display: 'flex', flexDirection: 'column' }}>
+            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flexGrow: 1 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                   <Typography variant="h4" sx={{ flexGrow: 1 }}>

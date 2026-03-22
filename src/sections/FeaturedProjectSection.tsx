@@ -21,11 +21,11 @@ export default function FeaturedProjectSection() {
   return (
     <Box id="featured" sx={{ py: 8, bgcolor: theme.palette.mode === 'dark' ? '#1a1a1a' : '#f9f9f9' }}>
       <Container maxWidth="lg">
-        <Typography variant="h2" sx={{ mb: 2 }}>
+        <Typography variant="h2" sx={{ mb: 2, textAlign: 'center' }}>
           {t('featured.title')}
         </Typography>
 
-        <Box sx={{ display: 'flex', gap: 1, mb: 4 }}>
+        <Box sx={{ display: 'flex', gap: 1, mb: 4, justifyContent: 'center' }}>
           <Chip label={t('featured.statusLive')} color="success" />
           <Chip label={t('featured.statusUpdated')} />
         </Box>

@@ -14,10 +14,10 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     setIsDark(savedTheme === 'dark');
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);

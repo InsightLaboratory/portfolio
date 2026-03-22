@@ -23,14 +23,14 @@ export default function SkillsSection() {
   return (
     <Box sx={{ py: 8 }}>
       <Container maxWidth="lg">
-        <Typography variant="h2" sx={{ mb: 6, fontWeight: 700 }}>
+        <Typography variant="h2" sx={{ mb: 6, fontWeight: 700, textAlign: 'center' }}>
           {t('skills.title')}
         </Typography>
 
         <Grid container spacing={3}>
           {skillsData.map((skill) => (
             <Grid item xs={12} sm={6} md={4} key={skill.key}>
-              <Card sx={{ h: '100%' }}>
+              <Card sx={{ height: '100%' }}>
                 <CardContent>
                   <Box sx={{ fontSize: '2rem', mb: 1 }}>{skill.icon}</Box>
                   <Typography variant="h4" sx={{ mb: 1 }}>

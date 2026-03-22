@@ -29,15 +29,15 @@ export default function HeroSection() {
         <Box sx={{ textAlign: 'center', mb: 4 }}>
           <Chip label={t('hero.badge')} color="primary" sx={{ mb: 2 }} />
         </Box>
-        <Typography variant="h1" sx={{ mb: 2, fontWeight: 800 }}>
+        <Typography variant="h1" sx={{ mb: 2, fontWeight: 800, textAlign: 'center' }}>
           {t('hero.title')}
         </Typography>
-        <Typography variant="h2" color="primary" sx={{ mb: 3 }}>
+        <Typography variant="h2" color="primary" sx={{ mb: 3, textAlign: 'center' }}>
           {t('hero.subtitle')}
         </Typography>
         <Typography
           variant="body1"
-          sx={{ maxWidth: '700px', mx: 'auto', mb: 4, fontSize: '1.1rem' }}
+          sx={{ maxWidth: '700px', mx: 'auto', mb: 4, fontSize: '1.1rem', textAlign: 'center' }}
         >
           {t('hero.description')}
         </Typography>

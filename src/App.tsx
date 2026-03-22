@@ -15,17 +15,17 @@ import Footer from './sections/Footer';
 
 function App() {
   useTranslation();
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     setIsDark(savedTheme === 'dark');
   }, []);
 
   // Listen for theme changes from localStorage
   useEffect(() => {
     const handleThemeChange = () => {
-      const savedTheme = localStorage.getItem('theme') || 'light';
+      const savedTheme = localStorage.getItem('theme') || 'dark';
       setIsDark(savedTheme === 'dark');
     };
 

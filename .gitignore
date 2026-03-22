@@ -41,3 +41,4 @@ GITHUB_PAGES_SETUP.md
 .cache/
 __pycache__/
 *.pyc
+node_modules

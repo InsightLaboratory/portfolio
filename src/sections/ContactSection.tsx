@@ -40,10 +40,10 @@ export default function ContactSection() {
       }}
     >
       <Container maxWidth="lg">
-        <Typography variant="h2" sx={{ mb: 2, fontWeight: 700 }}>
+        <Typography variant="h2" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
           {t('contact.title')}
         </Typography>
-        <Typography sx={{ mb: 6 }}>
+        <Typography sx={{ mb: 6, textAlign: 'center' }}>
           {t('contact.intro')}
         </Typography>
 
