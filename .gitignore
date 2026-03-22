@@ -20,14 +20,14 @@ build/
 *.min.css
 
 # Legacy files (old portfolio)
-index.html
-404.html
-robots.txt
-sitemap.xml
-styles.css
-script.js
-PORTFOLIO_README.md
-PORTFOLIO_README_EN.md
+legacy/index.html
+legacy/404.html
+legacy/robots.txt
+legacy/sitemap.xml
+legacy/styles.css
+legacy/script.js
+legacy/PORTFOLIO_README.md
+legacy/PORTFOLIO_README_EN.md
 PRODUCTION_READY.md
 EVIDENCE_ANALYSIS.md
 GITHUB_PAGES_SETUP.md
