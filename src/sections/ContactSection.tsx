@@ -60,6 +60,7 @@ export default function ContactSection() {
                   method="POST"
                   style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
                 >
+                  <input type="hidden" name="_next" value="https://insightlaboratory.github.io/portfolio/" />
                   <TextField
                     label={t('contact.name')}
                     name="name"
