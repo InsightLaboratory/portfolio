@@ -4,10 +4,10 @@ const sharedTypography = {
   fontFamily: '"Inter", sans-serif',
   h1: {
     fontFamily: '"Space Grotesk", sans-serif',
-    fontSize: '3.5rem',
-    fontWeight: 600,
-    lineHeight: 1.2,
-    letterSpacing: '-0.5px',
+    fontSize: '4rem',
+    fontWeight: 700,
+    lineHeight: 1.1,
+    letterSpacing: '-1px',
   },
   h2: {
     fontFamily: '"Space Grotesk", sans-serif',
@@ -69,13 +69,29 @@ export const lightTheme = createTheme({
         root: {
           textTransform: 'none',
           fontWeight: 600,
+          fontFamily: '"Inter", sans-serif',
+          borderRadius: '12px',
+          padding: '10px 28px',
+          fontSize: '0.95rem',
+          transition: 'all 0.25s ease',
           boxShadow: 'none',
           '&:hover': {
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 6px 20px rgba(0, 0, 0, 0.2)',
           },
         },
         contained: {
           background: 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)',
+          color: '#ffffff',
+          '&:hover': {
+            background: 'linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)',
+          },
+        },
+        outlined: {
+          borderWidth: '2px',
+          '&:hover': {
+            borderWidth: '2px',
+          },
         },
       },
     },
@@ -133,13 +149,31 @@ export const darkTheme = createTheme({
         root: {
           textTransform: 'none',
           fontWeight: 600,
+          fontFamily: '"Inter", sans-serif',
+          borderRadius: '12px',
+          padding: '10px 28px',
+          fontSize: '0.95rem',
+          transition: 'all 0.25s ease',
           boxShadow: 'none',
           '&:hover': {
-            boxShadow: '0 4px 12px rgba(66, 165, 245, 0.3)',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 6px 20px rgba(66, 165, 245, 0.35)',
           },
         },
         contained: {
           background: 'linear-gradient(135deg, #42a5f5 0%, #1976d2 100%)',
+          color: '#ffffff',
+          '&:hover': {
+            background: 'linear-gradient(135deg, #1e88e5 0%, #1565c0 100%)',
+          },
+        },
+        outlined: {
+          borderWidth: '2px',
+          borderColor: '#42a5f5',
+          '&:hover': {
+            borderWidth: '2px',
+            backgroundColor: 'rgba(66, 165, 245, 0.08)',
+          },
         },
       },
     },

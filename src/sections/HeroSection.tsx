@@ -19,8 +19,8 @@ export default function HeroSection() {
           theme.palette.mode === 'dark'
             ? 'linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%)'
             : 'linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)',
-        py: 8,
-        minHeight: '60vh',
+        py: 12,
+        minHeight: '70vh',
         display: 'flex',
         alignItems: 'center',
       }}

@@ -21,7 +21,7 @@ export default function SkillsSection() {
   ];
 
   return (
-    <Box sx={{ py: 8 }}>
+    <Box sx={{ py: 12 }}>
       <Container maxWidth="lg">
         <Typography variant="h2" sx={{ mb: 6, fontWeight: 700, textAlign: 'center' }}>
           {t('skills.title')}

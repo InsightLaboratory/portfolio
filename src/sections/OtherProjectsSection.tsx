@@ -18,7 +18,7 @@ export default function OtherProjectsSection() {
   const { t } = useTranslation();
 
   return (
-    <Box id="projects" sx={{ py: 8 }}>
+    <Box id="projects" sx={{ py: 12 }}>
       <Container maxWidth="lg">
         <Typography variant="h2" sx={{ mb: 6, fontWeight: 700, textAlign: 'center' }}>
           {t('otherProjects.title')}

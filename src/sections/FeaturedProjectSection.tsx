@@ -19,7 +19,7 @@ export default function FeaturedProjectSection() {
   const theme = useTheme();
 
   return (
-    <Box id="featured" sx={{ py: 8, bgcolor: theme.palette.mode === 'dark' ? '#1a1a1a' : '#f9f9f9' }}>
+    <Box id="featured" sx={{ py: 12, bgcolor: theme.palette.mode === 'dark' ? '#1a1a1a' : '#f9f9f9' }}>
       <Container maxWidth="lg">
         <Typography variant="h2" sx={{ mb: 2, textAlign: 'center' }}>
           {t('featured.title')}

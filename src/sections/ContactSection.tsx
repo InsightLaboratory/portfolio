@@ -35,7 +35,7 @@ export default function ContactSection() {
     <Box
       id="contact"
       sx={{
-        py: 8,
+        py: 12,
         bgcolor: theme.palette.mode === 'dark' ? '#1a1a1a' : '#f9f9f9',
       }}
     >
