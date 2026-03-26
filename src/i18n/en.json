@@ -1,0 +1,184 @@
+{
+  "nav": {
+    "featured": "Featured Project",
+    "projects": "Other Projects",
+    "expertise": "Expertise",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "📍 Argentina | Geospatial Systems",
+    "title": "Juan Manuel Torres",
+    "subtitle": "Geospatial Systems Developer for Mineral Exploration",
+    "description": "I connect geology with software engineering to transform exploration data into structured, queryable, and visual systems. I develop Python APIs, spatial databases (PostgreSQL/PostGIS), and interactive web applications focused on geospatial analysis.",
+    "btnFeatured": "Featured Project",
+    "btnGitHub": "GitHub Profile",
+    "btnLinkedIn": "LinkedIn"
+  },
+  "skills": {
+    "title": "Core Expertise",
+    "backend": {
+      "title": "Backend Development",
+      "desc": "Python • FastAPI • Uvicorn • Connection Pooling"
+    },
+    "frontend": {
+      "title": "Frontend Development",
+      "desc": "React • TypeScript • Vite • Tailwind CSS"
+    },
+    "geospatial": {
+      "title": "Geospatial Systems",
+      "desc": "PostGIS • Leaflet • GDAL • GeoPandas • GeoJSON workflows"
+    },
+    "database": {
+      "title": "Databases",
+      "desc": "PostgreSQL • Supabase • Spatial modeling • Query optimization"
+    },
+    "cloud": {
+      "title": "Cloud & Deployment",
+      "desc": "Render • Vercel • Supabase • Environment configuration"
+    },
+    "data": {
+      "title": "Data & Analysis",
+      "desc": "Mineral exploration • Assay data • Geospatial visualization"
+    }
+  },
+  "featured": {
+    "title": "GEO-PLATFORM v3.0",
+    "statusLive": "Live • Production",
+    "statusUpdated": "Updated March 2026",
+    "projectTitle": "Production Geospatial Exploration System",
+    "description": "An end-to-end platform designed to manage, analyze, and visualize mineral exploration data in real workflows.",
+    "features": "What the system does",
+    "featureList": [
+      "Structures drillhole data in a normalized spatial database",
+      "Exposes analytical data through a FastAPI backend",
+      "Serves GeoJSON for real-time map integration",
+      "Enables interactive exploration via a React + Leaflet interface"
+    ],
+    "btnLiveDemo": "Explore Live",
+    "btnAPI": "API Documentation",
+    "btnCode": "View Source",
+    "stackTitle": "System Overview",
+    "backendInfra": "Backend",
+    "backendItems": [
+      "FastAPI (Python 3.11)",
+      "REST API",
+      "Connection pooling, logging, CORS"
+    ],
+    "frontendFrame": "Frontend",
+    "frontendItems": [
+      "React + TypeScript",
+      "Vite",
+      "Leaflet maps",
+      "Dashboards"
+    ],
+    "geospatialData": "Data Layer",
+    "geospatialItems": [
+      "PostgreSQL + PostGIS",
+      "Spatial queries",
+      "Normalized schema"
+    ],
+    "visualization": "Visualization",
+    "vizItems": [
+      "React-Leaflet",
+      "GeoJSON features",
+      "Interactive popups and charts"
+    ],
+    "datasetScale": "Dataset Overview",
+    "drillholes": "Drillhole dataset",
+    "samples": "Interval sampling",
+    "assays": "Assay results",
+    "apiPerf": "API Performance",
+    "endpoints": "REST Endpoints",
+    "pagination": "Pagination Support",
+    "realtime": "Real-time updates",
+    "dbModel": "Database Model",
+    "tables": "Normalized schema",
+    "postgis": "PostGIS geometries",
+    "normalized": "Interval-based modeling",
+    "frontendComp": "Frontend",
+    "hero": "Hero Section",
+    "mapExp": "Map Explorer",
+    "dataAnal": "Data Analytics"
+  },
+  "otherProjects": {
+    "title": "Other Projects",
+    "geeApps": {
+      "title": "Google Earth Engine Applications",
+      "badge": "Geospatial analysis using satellite data",
+      "description": "Geospatial analysis using satellite data",
+      "featured": "Featured Applications:",
+      "app1": "Highest-Points-of-Argentina-Glaciar-Hydro-DEM: 3D visualization of Andean peaks with glacier, hydrology, and geological structure layers.",
+      "app2": "Cordobaengine: DEM-based topographic and hydrography analysis for regional studies.",
+      "tech": "Tech: Google Earth Engine, Landsat/Sentinel imagery, PostGIS"
+    },
+    "portfolio": {
+      "title": "Insight Laboratory",
+      "badge": "Curated geospatial tools and scientific resources",
+      "description": "Curated geospatial tools and scientific resources",
+      "featured": "Featured Resources:",
+      "resources": [
+        "Ventusky: Real-time weather data visualization",
+        "OpenStreetMap: Collaborative geographic mapping platform",
+        "Gaia GPS: Precision mapping for outdoor activities & geosciences",
+        "Asterank & Galaxies: Space data exploration",
+        "Paleobiology Database: Fossil records and biodiversity research"
+      ],
+      "tech": "Tech: Web development, data curation, science communication"
+    }
+  },
+  "expertise": {
+    "title": "Domain Expertise",
+    "geospatial": {
+      "title": "Geospatial Systems",
+      "desc": "PostGIS • GeoJSON • Spatial queries"
+    },
+    "mineral": {
+      "title": "Mineral Exploration",
+      "desc": "Drillhole modeling • Assay analysis • Geological logging"
+    },
+    "architecture": {
+      "title": "Backend & Architecture",
+      "desc": "API design • Data systems"
+    },
+    "database": {
+      "title": "Database Design",
+      "desc": "Normalized schemas • Interval modeling • Query optimization"
+    },
+    "visualization": {
+      "title": "Data Visualization",
+      "desc": "Maps • Charts"
+    },
+    "devops": {
+      "title": "Cloud & Deployment",
+      "desc": "Render • Vercel • Supabase"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "intro": "Interested in discussing geospatial projects, mineral exploration platforms, or full-stack development? Let's collaborate.",
+    "formTitle": "Send a Message",
+    "name": "Name *",
+    "namePlaceholder": "Your Name",
+    "email": "Email *",
+    "emailPlaceholder": "your@email.com",
+    "subject": "Subject *",
+    "subjectPlaceholder": "Project inquiry",
+    "message": "Message *",
+    "messagePlaceholder": "Tell me about your project...",
+    "btnSend": "Send Message",
+    "infoTitle": "Connect With Me",
+    "interestedIn": "Interested In:",
+    "interests": [
+      "Geospatial Data Platforms",
+      "Mineral Exploration Tech",
+      "Full-Stack Development",
+      "API Architecture & Design",
+      "PostgreSQL/PostGIS Optimization",
+      "React/TypeScript Projects"
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Juan Manuel Torres. Geospatial Engineer & Full-Stack Developer.",
+    "updated": "Last Updated: March 2026 | All projects are production-ready and actively maintained."
+  }
+}

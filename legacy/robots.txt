@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://insightlaboratory.github.io/portfolio/sitemap.xml
+
+# Crawl delay to avoid excessive crawling
+Crawl-delay: 1
