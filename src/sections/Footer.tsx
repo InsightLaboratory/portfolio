@@ -15,7 +15,7 @@ export default function Footer() {
         mt: 8,
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
         <Typography sx={{ mb: 1 }}>
           {t('footer.copyright')} •{' '}
           <Link
@@ -27,7 +27,7 @@ export default function Footer() {
             InsightLaboratory
           </Link>
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2" color="text.secondary">
           {t('footer.updated')}
         </Typography>
       </Container>

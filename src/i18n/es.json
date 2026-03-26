@@ -6,162 +6,151 @@
     "contact": "Contacto"
   },
   "hero": {
-    "badge": "📍 Argentina | Ingeniero Geoespacial Full-Stack",
+    "badge": "📍 Argentina | Sistemas Geoespaciales",
     "title": "Juan Manuel Torres",
-    "subtitle": "Desarrollador Geoespacial e Ingeniero Full-Stack",
-    "description": "Construcción de plataformas listas para producción para exploración mineral, análisis geoespacial y visualización interactiva de datos. Expertise en APIs Python, frontends React, bases de datos PostgreSQL/PostGIS e implementación en la nube.",
+    "subtitle": "Desarrollador de Sistemas Geoespaciales para Exploración Mineral",
+    "description": "Conecto la geología con la ingeniería de software para transformar datos de exploración en sistemas estructurados, consultables y visuales. Desarrollo APIs en Python, bases de datos espaciales (PostgreSQL/PostGIS) y aplicaciones web interactivas enfocadas en análisis geoespacial.",
     "btnFeatured": "Proyecto Destacado",
     "btnGitHub": "Perfil GitHub",
     "btnLinkedIn": "LinkedIn"
   },
   "skills": {
-    "title": "Experiencia Técnica",
+    "title": "Competencias Principales",
     "backend": {
       "title": "Desarrollo Backend",
       "desc": "Python • FastAPI • Uvicorn • Connection Pooling"
     },
     "frontend": {
-      "title": "Desarrollo Frontend",
-      "desc": "React 18 • TypeScript • Vite • Shadcn/ui • Tailwind CSS"
+      "title": "Frontend Development",
+      "desc": "React • TypeScript • Vite • Tailwind CSS"
     },
     "geospatial": {
-      "title": "Tecnologías Geoespaciales",
-      "desc": "PostGIS • Leaflet.js • GDAL • GeoPandas • OpenStreetMap"
+      "title": "Sistemas Geoespaciales",
+      "desc": "PostGIS • Leaflet • GDAL • GeoPandas • Flujos de trabajo GeoJSON"
     },
     "database": {
       "title": "Bases de Datos",
-      "desc": "PostgreSQL 15+ • Supabase • PostGIS 3.4+ • Optimización SQL"
+      "desc": "PostgreSQL • Supabase • Modelado espacial • Optimización de consultas"
     },
     "cloud": {
-      "title": "Implementación en la Nube",
-      "desc": "Render.com • Vercel • Supabase Cloud • CORS & SSL"
+      "title": "Nube y Despliegue",
+      "desc": "Render • Vercel • Supabase • Configuración de entornos"
     },
     "data": {
-      "title": "Análisis de Datos",
-      "desc": "Exploración Mineral • GeoJSON • Visualización de Datos • Recharts"
+      "title": "Datos y Análisis",
+      "desc": "Exploración mineral • Datos de ensayos • Visualización geoespacial"
     }
   },
   "featured": {
-    "title": "🌍 Proyecto Destacado: GEO-PLATFORM v3.0",
-    "statusLive": "✅ En Producción",
+    "title": "GEO-PLATFORM v3.0",
+    "statusLive": "En Producción",
     "statusUpdated": "Actualizado Marzo 2026",
-    "projectTitle": "Plataforma de Exploración Mineral Lista para Producción",
-    "description": "Una plataforma integral full-stack para geólogos y profesionales de minería para explorar, analizar y visualizar datos de exploración mineral en tiempo real. Incluye mapeo interactivo, análisis de ensayos y reconocimiento de patrones geoquímicos.",
-    "features": "Características Principales:",
+    "projectTitle": "Sistema Geoespacial de Exploración en Producción",
+    "description": "Una plataforma integral diseñada para gestionar, analizar y visualizar datos de exploración mineral en flujos de trabajo reales.",
+    "features": "Qué hace el sistema",
     "featureList": [
-      "🗺️ Ubicaciones de perforaciones en tiempo real con mapas interactivos React-Leaflet",
-      "📊 Visualización de datos de ensayos con relaciones profundidad-ley",
-      "📍 Análisis espacial GeoJSON con consultas PostGIS",
-      "🌙 Alternancia de modo oscuro/claro con tema persistente",
-      "📈 Recharts interactivos con rankings de ley Au (oro)",
-      "🔍 Panel de búsqueda y filtro inteligente para descubrimiento de perforaciones",
-      "⚡ Integración de API segura por tipos (TypeScript + Axios)",
-      "📱 Diseño totalmente responsive (Móvil a Escritorio)"
+      "Estructura datos de perforación en una base espacial normalizada",
+      "Expone datos analíticos a través de un backend FastAPI",
+      "Sirve GeoJSON para integración de mapas en tiempo real",
+      "Permite exploración interactiva mediante una interfaz React + Leaflet"
     ],
-    "btnLiveDemo": "🚀 Explorar Demo en Vivo",
-    "btnAPI": "📡 Documentación API",
-    "btnCode": "💾 Ver Código Fuente",
-    "stackTitle": "Stack Tecnológico Completo",
-    "backendInfra": "Infraestructura Backend",
+    "btnLiveDemo": "Explorar en Vivo",
+    "btnAPI": "Documentación de la API",
+    "btnCode": "Ver Código",
+    "stackTitle": "Resumen del Sistema",
+    "backendInfra": "Backend",
     "backendItems": [
-      "FastAPI 0.104.1 (Python 3.11.9)",
-      "Connection Pooling (2-10 conexiones)",
-      "9 Endpoints RESTful",
-      "CORS Habilitado & Logging",
-      "Implementado en Render.com"
+      "FastAPI (Python 3.11)",
+      "REST API",
+      "Connection pooling, logging, CORS"
     ],
-    "frontendFrame": "Framework Frontend",
+    "frontendFrame": "Frontend",
     "frontendItems": [
-      "React 18 + TypeScript",
-      "Vite 5.4.21 (Compilaciones ultra-rápidas)",
-      "Componentes Shadcn/ui",
-      "Estilos Tailwind CSS",
-      "Implementado en Vercel"
+      "React + TypeScript",
+      "Vite",
+      "Leaflet maps",
+      "Dashboards"
     ],
-    "geospatialData": "Geoespacial y Datos",
+    "geospatialData": "Capa de Datos",
     "geospatialItems": [
-      "PostgreSQL 15 + PostGIS 3.4+",
-      "Hosting en Supabase Cloud",
-      "30+ Tablas en Base de Datos",
-      "13 Vistas Analíticas",
-      "UUID Claves Primarias (Distribuidas)"
+      "PostgreSQL + PostGIS",
+      "Consultas espaciales",
+      "Esquema normalizado"
     ],
-    "visualization": "Visualización y Mapeo",
+    "visualization": "Visualización",
     "vizItems": [
-      "React-Leaflet 4.2",
-      "Teselas OpenStreetMap",
-      "Recharts para Analítica",
+      "React-Leaflet",
       "Características GeoJSON",
-      "Popups Interactivos"
+      "Popups y gráficos interactivos"
     ],
-    "datasetScale": "Escala del Dataset",
-    "drillholes": "4 Perforaciones",
-    "samples": "~1,200 Muestras",
-    "assays": "682 Resultados de Ensayos",
+    "datasetScale": "Visión general del conjunto de datos",
+    "drillholes": "Conjunto de perforaciones",
+    "samples": "Muestreo por intervalos",
+    "assays": "Resultados de ensayos",
     "apiPerf": "Rendimiento API",
-    "endpoints": "9 Endpoints",
-    "pagination": "Soporte de Paginación",
-    "realtime": "Actualizaciones en Tiempo Real",
-    "dbModel": "Modelo de Base de Datos",
-    "tables": "30+ Tablas",
-    "postgis": "Geometría PostGIS",
-    "normalized": "Esquema Normalizado",
+    "endpoints": "Endpoints REST",
+    "pagination": "Soporte de paginación",
+    "realtime": "Actualizaciones en tiempo real",
+    "dbModel": "Modelo de base de datos",
+    "tables": "Esquema normalizado",
+    "postgis": "Geometrías PostGIS",
+    "normalized": "Modelado basado en intervalos",
     "frontendComp": "Frontend",
     "hero": "Sección Hero",
     "mapExp": "Explorador de Mapas",
     "dataAnal": "Analítica de Datos"
   },
   "otherProjects": {
-    "title": "Otros Proyectos y Contribuciones",
+    "title": "Otros Proyectos",
     "geeApps": {
-      "title": "🛰️ Aplicaciones Google Earth Engine",
-      "badge": "JavaScript • Análisis Geoespacial",
-      "description": "Aplicaciones interactivas para análisis geoespacial a gran escala utilizando la plataforma de computación en la nube de Google Earth Engine.",
-      "featured": "Aplicaciones Destacadas:",
-      "app1": "Highest-Points-of-Argentina-Glaciar-Hydro-DEM: Visualización 3D de picos andinos con capas de glaciares, hidrología y estructura geológica. Exploración interactiva de MDE de elevaciones de 4.000+ metros.",
-      "app2": "Cordobaengine: Análisis de topografía de Sierra Pampeanas con modelos MDE, hidrografía superficial y formaciones geológicas.",
-      "tech": "Tech: API JavaScript, imágenes Landsat, geometría PostGIS, Catálogo de Datos"
+      "title": "Aplicaciones Google Earth Engine",
+      "badge": "Análisis geoespacial usando datos satelitales",
+      "description": "Análisis geoespacial usando datos satelitales",
+      "featured": "Aplicaciones destacadas:",
+      "app1": "Highest-Points-of-Argentina-Glaciar-Hydro-DEM: Visualización 3D de picos andinos con capas de glaciares, hidrología y estructura geológica.",
+      "app2": "Cordobaengine: Análisis topográfico y de hidrografía con modelos MDE para estudios regionales.",
+      "tech": "Tech: Google Earth Engine, imágenes Landsat/Sentinel, PostGIS"
     },
     "portfolio": {
-      "title": "🌐 Portfolio InsightLab",
-      "badge": "Desarrollo Web • Comunicación Científica",
-      "description": "Un sitio de portfolio que muestra recursos geoespaciales, herramientas científicas e innovaciones tecnológicas en ciencias de la tierra.",
-      "featured": "Recursos Destacados:",
+      "title": "Insight Laboratory",
+      "badge": "Herramientas geoespaciales y recursos científicos curados",
+      "description": "Herramientas geoespaciales y recursos científicos curados",
+      "featured": "Recursos destacados:",
       "resources": [
         "Ventusky: Visualización de datos meteorológicos en tiempo real",
         "OpenStreetMap: Plataforma colaborativa de mapeo geográfico",
         "Gaia GPS: Mapeo de precisión para actividades al aire libre y geociencias",
-        "Asterank & Galaxies: Exploración de datos espaciales (600K+ asteroides)",
+        "Asterank & Galaxies: Exploración de datos espaciales",
         "Paleobiology Database: Registros fósiles e investigación de biodiversidad"
       ],
-      "tech": "Tech: HTML/CSS, Comunicación científica, Curación de datos"
+      "tech": "Tech: Desarrollo web, curación de datos, comunicación científica"
     }
   },
   "expertise": {
     "title": "Experiencia de Dominio",
     "geospatial": {
-      "title": "🗺️ Análisis Geoespacial",
-      "desc": "PostGIS, GDAL, GeoPandas, sistemas de coordenadas (EPSG:4326), consultas espaciales, operaciones geométricas, formato GeoJSON"
+      "title": "Sistemas Geoespaciales",
+      "desc": "PostGIS • GeoJSON • Consultas espaciales"
     },
     "mineral": {
-      "title": "💰 Exploración Mineral",
-      "desc": "Modelado de datos de perforaciones, análisis de ensayos, estimación de leyes, interpretación de dominios, registro de litología/alteración/mineralización"
+      "title": "Exploración Mineral",
+      "desc": "Modelado de perforaciones • Análisis de ensayos • Registro geológico"
     },
     "architecture": {
-      "title": "🏗️ Arquitectura Full-Stack",
-      "desc": "Diseño de API escalable, optimización de bases de datos, frontend responsivo, implementación en la nube, monitoreo de producción"
+      "title": "Backend y Arquitectura",
+      "desc": "Diseño de API • Sistemas de datos"
     },
     "database": {
-      "title": "💾 Diseño de Base de Datos",
-      "desc": "Esquemas normalizados, claves primarias UUID, modelado basado en intervalos (numrange), restricciones EXCLUDE, vistas analíticas, optimización de consultas"
+      "title": "Diseño de Bases de Datos",
+      "desc": "Esquemas normalizados • Modelado por intervalos • Optimización de consultas"
     },
     "visualization": {
-      "title": "📊 Visualización de Datos",
-      "desc": "Mapas interactivos (Leaflet), gráficos (Recharts), tema de modo oscuro, diseño responsivo, actualizaciones de datos en tiempo real"
+      "title": "Visualización de Datos",
+      "desc": "Mapas • Gráficos"
     },
     "devops": {
-      "title": "☁️ DevOps en la Nube",
-      "desc": "Implementación en Render, CI/CD en Vercel, gestión de Supabase, configuración de entorno, auto-escalado"
+      "title": "Nube y Despliegue",
+      "desc": "Render • Vercel • Supabase"
     }
   },
   "contact": {
@@ -189,7 +178,7 @@
     ]
   },
   "footer": {
-    "copyright": "© 2026 Juan Manuel Torres. Ingeniero Geoespacial e Ingeniero Full-Stack.",
-    "updated": "Última Actualización: Marzo 2026 | Todos los proyectos están listos para producción y mantenidos activamente."
+    "copyright": "© 2026 Juan Manuel Torres. Desarrollador de Sistemas Geoespaciales y Full-Stack.",
+    "updated": "Última actualización: Marzo 2026 | Todos los proyectos están listos para producción y mantenidos activamente."
   }
 }

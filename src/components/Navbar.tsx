@@ -96,10 +96,10 @@ export default function Navbar() {
       sx={{
         background:
           theme.palette.mode === 'dark'
-            ? 'linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%)'
-            : 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%)',
+            ? '#0f0f0f'
+            : '#fafafa',
         color: theme.palette.text.primary,
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
       }}
     >
       <Container maxWidth="lg">
@@ -127,7 +127,19 @@ export default function Navbar() {
               </ToggleButtonGroup>
 
               {navLinks.map((link) => (
-                <Button key={link.href} color="inherit" href={link.href}>
+                <Button 
+                  key={link.href} 
+                  color="inherit" 
+                  href={link.href}
+                  sx={{
+                    color: theme.palette.mode === 'dark' ? '#d1d5db' : '#4b5563',
+                    transition: 'color 0.25s ease',
+                    '&:hover': {
+                      color: '#10b981',
+                      backgroundColor: 'transparent',
+                    },
+                  }}
+                >
                   {link.label}
                 </Button>
               ))}

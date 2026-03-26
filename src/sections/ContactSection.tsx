@@ -43,7 +43,7 @@ export default function ContactSection() {
         <Typography variant="h2" sx={{ mb: 2, fontWeight: 700, textAlign: 'center' }}>
           {t('contact.title')}
         </Typography>
-        <Typography sx={{ mb: 6, textAlign: 'center' }}>
+        <Typography color="text.secondary" sx={{ mb: 6, textAlign: 'center' }}>
           {t('contact.intro')}
         </Typography>
 

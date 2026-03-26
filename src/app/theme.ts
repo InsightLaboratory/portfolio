@@ -41,9 +41,9 @@ export const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#1976d2',
-      light: '#42a5f5',
-      dark: '#1565c0',
+      main: '#10b981',
+      light: '#6ee7b7',
+      dark: '#059669',
     },
     secondary: {
       main: '#dc004e',
@@ -81,16 +81,33 @@ export const lightTheme = createTheme({
           },
         },
         contained: {
-          background: 'linear-gradient(135deg, #1976d2 0%, #1565c0 100%)',
+          background: '#15a373',
           color: '#ffffff',
+          transition: 'all 0.25s ease',
           '&:hover': {
-            background: 'linear-gradient(135deg, #1565c0 0%, #0d47a1 100%)',
+            background: '#117a65',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 6px 20px rgba(16, 185, 129, 0.25)',
           },
         },
         outlined: {
           borderWidth: '2px',
+          borderColor: '#10b981',
+          color: '#10b981',
+          transition: 'all 0.25s ease',
           '&:hover': {
-            borderWidth: '2px',
+            borderColor: '#059669',
+            color: '#059669',
+            backgroundColor: 'rgba(16, 185, 129, 0.05)',
+            boxShadow: '0 0 0 3px rgba(16, 185, 129, 0.1)',
+          },
+        },
+        text: {
+          color: '#10b981',
+          transition: 'all 0.25s ease',
+          '&:hover': {
+            color: '#059669',
+            backgroundColor: 'rgba(16, 185, 129, 0.05)',
           },
         },
       },
@@ -111,6 +128,31 @@ export const lightTheme = createTheme({
       styleOverrides: {
         root: {
           fontWeight: 500,
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            backgroundColor: 'rgba(16, 185, 129, 0.15)',
+            color: '#10b981',
+          },
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          transition: 'color 0.3s ease',
+          '&:hover': {
+            color: '#10b981',
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          transition: 'color 0.3s ease',
+          '&:hover': {
+            color: '#10b981',
+          },
         },
       },
     },
@@ -121,9 +163,9 @@ export const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#42a5f5',
-      light: '#64b5f6',
-      dark: '#1976d2',
+      main: '#10b981',
+      light: '#6ee7b7',
+      dark: '#059669',
     },
     secondary: {
       main: '#f73378',
@@ -157,22 +199,37 @@ export const darkTheme = createTheme({
           boxShadow: 'none',
           '&:hover': {
             transform: 'translateY(-2px)',
-            boxShadow: '0 6px 20px rgba(66, 165, 245, 0.35)',
+            boxShadow: '0 3px 10px rgba(66, 165, 245, 0.14)',
           },
         },
         contained: {
-          background: 'linear-gradient(135deg, #42a5f5 0%, #1976d2 100%)',
+          background: '#15a373',
           color: '#ffffff',
+          transition: 'all 0.25s ease',
           '&:hover': {
-            background: 'linear-gradient(135deg, #1e88e5 0%, #1565c0 100%)',
+            background: '#117a65',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 6px 20px rgba(16, 185, 129, 0.3)',
           },
         },
         outlined: {
           borderWidth: '2px',
-          borderColor: '#42a5f5',
+          borderColor: '#10b981',
+          color: '#10b981',
+          transition: 'all 0.25s ease',
           '&:hover': {
             borderWidth: '2px',
-            backgroundColor: 'rgba(66, 165, 245, 0.08)',
+            borderColor: '#6ee7b7',
+            color: '#6ee7b7',
+            backgroundColor: 'rgba(16, 185, 129, 0.08)',
+          },
+        },
+        text: {
+          color: '#10b981',
+          transition: 'all 0.25s ease',
+          '&:hover': {
+            color: '#6ee7b7',
+            backgroundColor: 'rgba(16, 185, 129, 0.08)',
           },
         },
       },
@@ -183,8 +240,8 @@ export const darkTheme = createTheme({
           boxShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
           transition: 'all 0.3s ease',
           '&:hover': {
-            boxShadow: '0 8px 24px rgba(66, 165, 245, 0.2)',
-            transform: 'translateY(-4px)',
+            boxShadow: '0 6px 16px rgba(16, 185, 129, 0.08)',
+              transform: 'translateY(-3px)',
           },
         },
       },
@@ -193,6 +250,31 @@ export const darkTheme = createTheme({
       styleOverrides: {
         root: {
           fontWeight: 500,
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            backgroundColor: 'rgba(16, 185, 129, 0.15)',
+            color: '#10b981',
+          },
+        },
+      },
+    },
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          transition: 'color 0.3s ease',
+          '&:hover': {
+            color: '#10b981',
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          transition: 'color 0.3s ease',
+          '&:hover': {
+            color: '#10b981',
+          },
         },
       },
     },
