@@ -6,10 +6,10 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "📍 Argentina | Geospatial Systems",
+    "badge": "📍 Córdoba | Argentina",
     "title": "Juan Manuel Torres",
-    "subtitle": "Geospatial Systems Developer for Mineral Exploration",
-    "description": "I connect geology with software engineering to transform exploration data into structured, queryable, and visual systems. I develop Python APIs, spatial databases (PostgreSQL/PostGIS), and interactive web applications focused on geospatial analysis.",
+    "subtitle": "Geospatial Developer",
+    "description": "I connect Geosciences with Software Engineering to transform exploration data into structured, queryable, and visual systems. I develop Python APIs, spatial databases (PostgreSQL/PostGIS), and interactive web applications focused on geospatial analysis.",
     "btnFeatured": "Featured Project",
     "btnGitHub": "GitHub Profile",
     "btnLinkedIn": "LinkedIn"
