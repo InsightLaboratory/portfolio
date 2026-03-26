@@ -55,9 +55,6 @@ export default function Navbar() {
 
   const drawer = (
     <Box sx={{ width: 260, pt: 2 }}>
-      <Box sx={{ px: 2, pb: 2, fontWeight: 700, fontSize: '1.2rem' }}>
-        Juan M. Torres
-      </Box>
       <Divider />
       <List>
         {navLinks.map((link) => (
@@ -111,7 +108,7 @@ export default function Navbar() {
             minHeight: { xs: 56, md: 64 },
           }}
         >
-          <Box sx={{ fontWeight: 700, fontSize: '1.3rem' }}>Juan M. Torres</Box>
+          <Box />
 
           {/* Desktop nav */}
           {!isMobile && (

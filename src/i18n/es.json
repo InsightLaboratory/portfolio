@@ -6,7 +6,7 @@
     "contact": "Contacto"
   },
   "hero": {
-    "badge": "📍 Argentina | Sistemas Geoespaciales",
+    "badge": "📍 Córdoba | Argentina",
     "title": "Juan Manuel Torres",
     "subtitle": "Desarrollador de Sistemas Geoespaciales para Exploración Mineral",
     "description": "Conecto la geología con la ingeniería de software para transformar datos de exploración en sistemas estructurados, consultables y visuales. Desarrollo APIs en Python, bases de datos espaciales (PostgreSQL/PostGIS) y aplicaciones web interactivas enfocadas en análisis geoespacial.",
