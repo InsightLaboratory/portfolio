@@ -19,256 +19,236 @@ export default function FeaturedProjectSection() {
   const theme = useTheme();
 
   return (
-    <Box id="featured" sx={{ py: { xs: 6, md: 12 }, bgcolor: theme.palette.mode === 'dark' ? '#1a1a1a' : '#f9f9f9' }}>
-      <Container maxWidth="lg">
-        <Typography variant="h2" sx={{ mb: 2, textAlign: 'center' }}>
-          {t('featured.title')}
-        </Typography>
-
-        <Box sx={{ display: 'flex', gap: 1, mb: 4, justifyContent: 'center' }}>
-          <Chip label={t('featured.statusLive')} color="success" />
-          <Chip label={t('featured.statusUpdated')} />
+    <Box
+      id="featured"
+      sx={{
+        py: { xs: 6, md: 12 },
+        position: 'relative',
+        bgcolor: theme.palette.mode === 'dark' ? '#171c24' : '#f9f9f9',
+        overflow: 'hidden',
+        '::before': {
+          content: '""',
+          position: 'absolute',
+          inset: 0,
+          zIndex: 0,
+          background:
+            'radial-gradient(ellipse 70% 40% at 60% 0%, rgba(80,180,255,0.06) 0%, rgba(0,0,0,0.00) 80%), ' +
+            'linear-gradient(120deg, rgba(80,0,255,0.035) 0%, rgba(0,255,255,0.02) 100%)',
+          pointerEvents: 'none',
+        },
+        '::after': {
+          content: '""',
+          position: 'absolute',
+          inset: 0,
+          zIndex: 0,
+          backgroundImage: 'none',
+          pointerEvents: 'none',
+        },
+      }}
+    >
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        {/* Project Hero Block */}
+        <Box sx={{ mb: { xs: 3, md: 4 }, textAlign: 'center' }}>
+          <Typography variant="h2" sx={{ fontWeight: 700, mb: 0.5 }}>
+            {t('featured.title')}
+          </Typography>
+          <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', mb: 0.5 }}>
+            <Chip label={t('featured.statusLive')} color="success" />
+            <Chip label={t('featured.statusUpdated')} />
+          </Box>
+          <Typography variant="h5" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto', fontWeight: 400, lineHeight: 1.3, mb: 0 }}>
+            End-to-end platform for managing, analyzing, and visualizing mineral exploration data.
+          </Typography>
         </Box>
 
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Typography
-              variant="h3"
-              sx={{
-                mb: 2,
-                fontSize: { xs: '1.3rem', md: '1.5rem' },
-                fontWeight: 500,
-                opacity: 0.75,
+        {/* Features as Product Cards (compressed) */}
+        <Box sx={{ mb: { xs: 4, md: 7 } }}>
+          <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 }, minHeight: 90, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Typography sx={{ fontWeight: 500, textAlign: 'center', fontSize: { xs: '1rem', md: '1.08rem' } }}>
+                    Normalized drillhole database
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 }, minHeight: 90, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Typography sx={{ fontWeight: 500, textAlign: 'center', fontSize: { xs: '1rem', md: '1.08rem' } }}>
+                    FastAPI backend for analytics
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 }, minHeight: 90, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Typography sx={{ fontWeight: 500, textAlign: 'center', fontSize: { xs: '1rem', md: '1.08rem' } }}>
+                    Real-time GeoJSON map integration
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 }, minHeight: 90, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Typography sx={{ fontWeight: 500, textAlign: 'center', fontSize: { xs: '1rem', md: '1.08rem' } }}>
+                    Interactive exploration (React + Leaflet)
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </Box>
+
+        {/* Visual Block: Map + Chart (balanced proportions) */}
+        <Box sx={{
+          maxWidth: 1100,
+          mx: 'auto',
+          mb: { xs: 4, md: 6 },
+          mt: { xs: 4, md: 7 },
+          pt: 0,
+          pb: 0,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}>
+          <Box sx={{ width: { xs: '100%', sm: '85%' }, maxWidth: 900, mb: { xs: 2, md: 3 } }}>
+            <img
+              src={`${(import.meta as any).env.BASE_URL}images/map.png`}
+              alt="Drillhole spatial visualization using PostGIS and Leaflet"
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxHeight: 340,
+                borderRadius: 12,
+                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                display: 'block',
+                margin: '0 auto',
+                objectFit: 'cover',
               }}
-            >
-              {t('featured.projectTitle')}
-            </Typography>
-            <Typography sx={{ mb: 3 }}>
-              {t('featured.description')}
-            </Typography>
-
-            <Box
-              sx={{
-                my: { xs: 6, md: 10 },
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
+            />
+          </Box>
+          <Box sx={{ width: { xs: '100%', sm: '68%' }, maxWidth: 720, mb: { xs: 1, md: 2 } }}>
+            <img
+              src={`${(import.meta as any).env.BASE_URL}images/chart.png`}
+              alt="Assay analysis chart showing depth vs grade relationship"
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxHeight: 240,
+                borderRadius: 12,
+                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                display: 'block',
+                margin: '0 auto',
+                objectFit: 'contain',
               }}
-            >
-              <img
-                src={`${(import.meta as any).env.BASE_URL}images/map.png`}
-                alt="Drillhole spatial visualization using PostGIS and Leaflet"
-                style={{
-                  width: '100%',
-                  maxWidth: 1200,
-                  height: 'auto',
-                  borderRadius: 12,
-                  boxShadow: '0 16px 40px rgba(0,0,0,0.45), 0 0 16px rgba(0,150,255,0.06)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLImageElement).style.transform = 'scale(1.02)';
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLImageElement).style.transform = 'scale(1)';
-                }}
-              />
-              <Typography
-                variant="body2"
-                sx={{
-                  mt: 2,
-                  color: 'text.secondary',
-                  fontStyle: 'italic',
-                  maxWidth: 900,
-                  textAlign: 'center',
-                }}
-              >
-                Interactive drillhole visualization powered by PostGIS and Leaflet.
-              </Typography>
-            </Box>
+            />
+          </Box>
+          <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic', textAlign: 'center', mt: 0.5 }}>
+            Drillhole and assay data visualized with PostGIS, Leaflet, and custom analytics.
+          </Typography>
+        </Box>
 
-            <Typography variant="h5" sx={{ mb: 2 }}>
-              {t('featured.features')}
-            </Typography>
-            <ul>
-              {(t('featured.featureList', { returnObjects: true }) as string[]).map(
-                (feature: string, idx: number) => (
-                  <li key={idx}>
-                    <Typography>{feature}</Typography>
-                  </li>
-                )
-              )}
-            </ul>
-
-            <Box sx={{ display: 'flex', gap: 2, mt: 3, flexWrap: 'wrap' }}>
-              <Button
-                variant="contained"
-                href="https://geo-platform-cyan.vercel.app/"
-                target="_blank"
-              >
-                {t('featured.btnLiveDemo')}
-              </Button>
-              <Button
-                variant="outlined"
-                href="https://geo-plataform.onrender.com"
-                target="_blank"
-              >
-                {t('featured.btnAPI')}
-              </Button>
-              <Button
-                variant="outlined"
-                href="https://github.com/InsightLaboratory/Geo_Platform"
-                target="_blank"
-              >
-                {t('featured.btnCode')}
-              </Button>
-            </Box>
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <Card>
-              <CardContent>
-                <Typography variant="h5" sx={{ mb: 2 }}>
-                  {t('featured.stackTitle')}
-                </Typography>
-
-                {/* Backend */}
-                <Box sx={{ mb: 3 }}>
+        {/* System Overview */}
+        <Box sx={{ mb: { xs: 2, md: 3 } }}>
+          <Typography variant="h4" sx={{ fontWeight: 700, mb: 3, textAlign: 'center' }}>
+            {t('featured.stackTitle')}
+          </Typography>
+          <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
+            {/* Backend */}
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                   <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
-                    {t('featured.backendInfra')}
+                    Backend
                   </Typography>
                   <List dense>
-                    {(t('featured.backendItems', { returnObjects: true }) as string[]).map(
-                      (item: string, idx: number) => (
-                        <ListItem key={idx}>
-                          <ListItemText primary={item} />
-                        </ListItem>
-                      )
-                    )}
+                    <ListItem disableGutters><ListItemText primary="FastAPI (Python 3.11)" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Connection pooling & CORS" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Logging & analytics" /></ListItem>
                   </List>
-                </Box>
-
-                {/* Frontend */}
-                <Box sx={{ mb: 3 }}>
+                </CardContent>
+              </Card>
+            </Grid>
+            {/* Frontend */}
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                   <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
-                    {t('featured.frontendFrame')}
+                    Frontend
                   </Typography>
                   <List dense>
-                    {(t('featured.frontendItems', { returnObjects: true }) as string[]).map(
-                      (item: string, idx: number) => (
-                        <ListItem key={idx}>
-                          <ListItemText primary={item} />
-                        </ListItem>
-                      )
-                    )}
+                    <ListItem disableGutters><ListItemText primary="React + TypeScript" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Vite build system" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Leaflet map UI" /></ListItem>
                   </List>
-                </Box>
-
-                {/* Geospatial */}
-                <Box sx={{ mb: 3 }}>
+                </CardContent>
+              </Card>
+            </Grid>
+            {/* Data Layer */}
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                   <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
-                    {t('featured.geospatialData')}
+                    Data Layer
                   </Typography>
                   <List dense>
-                    {(t('featured.geospatialItems', { returnObjects: true }) as string[]).map(
-                      (item: string, idx: number) => (
-                        <ListItem key={idx}>
-                          <ListItemText primary={item} />
-                        </ListItem>
-                      )
-                    )}
+                    <ListItem disableGutters><ListItemText primary="PostgreSQL + PostGIS" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Spatial queries" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Normalized schema" /></ListItem>
                   </List>
-                </Box>
-
-                {/* Visualization */}
-                <Box>
+                </CardContent>
+              </Card>
+            </Grid>
+            {/* Visualization */}
+            <Grid item xs={12} sm={6} md={3}>
+              <Card sx={{ borderRadius: 2, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', height: '100%' }}>
+                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                   <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }}>
-                    {t('featured.visualization')}
+                    Visualization
                   </Typography>
                   <List dense>
-                    {(t('featured.vizItems', { returnObjects: true }) as string[]).map(
-                      (item: string, idx: number) => (
-                        <ListItem key={idx}>
-                          <ListItemText primary={item} />
-                        </ListItem>
-                      )
-                    )}
+                    <ListItem disableGutters><ListItemText primary="React-Leaflet map" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="GeoJSON features" /></ListItem>
+                    <ListItem disableGutters><ListItemText primary="Interactive popups & charts" /></ListItem>
                   </List>
-                  <Box sx={{ mt: 2 }}>
-                    <img
-                      src={`${(import.meta as any).env.BASE_URL}images/chart.png`}
-                      alt="Assay analysis chart showing depth vs grade relationship"
-                      className="rounded-xl shadow-md w-full"
-                      style={{ width: '100%', height: 'auto' }}
-                    />
-                  </Box>
-                  <Box sx={{ mt: 2 }}>
-                    <img
-                      src={`${(import.meta as any).env.BASE_URL}images/system.png`}
-                      alt="Geospatial system architecture: FastAPI backend, PostGIS database, React frontend"
-                      className="rounded-lg shadow-md w-full"
-                      style={{ width: '100%', height: 'auto' }}
-                    />
-                  </Box>
-                </Box>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Grid>
           </Grid>
-        </Grid>
+        </Box>
 
-        {/* Stats */}
-        <Grid container spacing={2} sx={{ mt: 4 }}>
-          <Grid item xs={6} sm={6} md={3}>
-            <Card sx={{ height: '100%' }}>
-              <CardContent sx={{ textAlign: 'center' }}>
-                <Typography sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'text.primary' }}>
-                  {t('featured.datasetScale')}
-                </Typography>
-                <Typography color="textSecondary">{t('featured.drillholes')}</Typography>
-                <Typography color="textSecondary">{t('featured.samples')}</Typography>
-                <Typography color="textSecondary">{t('featured.assays')}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={6} sm={6} md={3}>
-            <Card sx={{ height: '100%' }}>
-              <CardContent sx={{ textAlign: 'center' }}>
-                <Typography sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'text.primary' }}>
-                  {t('featured.apiPerf')}
-                </Typography>
-                <Typography color="textSecondary">{t('featured.endpoints')}</Typography>
-                <Typography color="textSecondary">{t('featured.pagination')}</Typography>
-                <Typography color="textSecondary">{t('featured.realtime')}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={6} sm={6} md={3}>
-            <Card sx={{ height: '100%' }}>
-              <CardContent sx={{ textAlign: 'center' }}>
-                <Typography sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'text.primary' }}>
-                  {t('featured.dbModel')}
-                </Typography>
-                <Typography color="textSecondary">{t('featured.tables')}</Typography>
-                <Typography color="textSecondary">{t('featured.postgis')}</Typography>
-                <Typography color="textSecondary">{t('featured.normalized')}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={6} sm={6} md={3}>
-            <Card sx={{ height: '100%' }}>
-              <CardContent sx={{ textAlign: 'center' }}>
-                <Typography sx={{ fontSize: '1.5rem', fontWeight: 700, color: 'text.primary' }}>
-                  {t('featured.frontendComp')}
-                </Typography>
-                <Typography color="textSecondary">{t('featured.hero')}</Typography>
-                <Typography color="textSecondary">{t('featured.mapExp')}</Typography>
-                <Typography color="textSecondary">{t('featured.dataAnal')}</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+        {/* Action Buttons */}
+        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mt: { xs: 2, md: 4 } }}>
+          <Button
+            variant="contained"
+            href="https://geo-platform-cyan.vercel.app/"
+            target="_blank"
+            size="large"
+            sx={{ fontWeight: 600 }}
+          >
+            {t('featured.btnLiveDemo')}
+          </Button>
+          <Button
+            variant="outlined"
+            href="https://geo-plataform.onrender.com"
+            target="_blank"
+            size="large"
+          >
+            {t('featured.btnAPI')}
+          </Button>
+          <Button
+            variant="outlined"
+            href="https://github.com/InsightLaboratory/Geo_Platform"
+            target="_blank"
+            size="large"
+          >
+            {t('featured.btnCode')}
+          </Button>
+        </Box>
       </Container>
     </Box>
   );
