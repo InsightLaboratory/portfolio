@@ -18,6 +18,7 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import { useState, useEffect } from 'react';
+import ExplorationViewer from "./ExplorationViewer";
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
@@ -25,6 +26,7 @@ export default function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isDark, setIsDark] = useState(true);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [openViewer, setOpenViewer] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -106,6 +108,7 @@ export default function Navbar() {
             justifyContent: 'space-between',
             alignItems: 'center',
             minHeight: { xs: 56, md: 64 },
+            flexWrap: 'wrap',
           }}
         >
           <Box />
@@ -141,6 +144,14 @@ export default function Navbar() {
                 </Button>
               ))}
 
+              <Button
+                color="inherit"
+                onClick={() => setOpenViewer(true)}
+                sx={{ whiteSpace: 'nowrap' }}
+              >
+                Map
+              </Button>
+
               <Button variant="outlined" size="small" onClick={handleThemeToggle}>
                 {isDark ? '☀️' : '🌙'}
               </Button>
@@ -168,6 +179,32 @@ export default function Navbar() {
       >
         {drawer}
       </Drawer>
+
+      {openViewer && (
+        <ExplorationViewer onClose={() => setOpenViewer(false)} />
+      )}
+
+      {/* Floating button for mobile: always visible on small screens */}
+      <Button
+        onClick={() => setOpenViewer(true)}
+        variant="contained"
+        sx={{
+          position: 'fixed',
+          bottom: 20,
+          right: 20,
+          bgcolor: '#00ff88',
+          color: '#000',
+          borderRadius: '50%',
+          width: 52,
+          height: 52,
+          minWidth: 0,
+          display: { xs: 'flex', md: 'none' },
+          zIndex: 1300,
+          boxShadow: '0 6px 18px rgba(0,0,0,0.24)',
+        }}
+      >
+        🗺️
+      </Button>
     </AppBar>
   );
 }

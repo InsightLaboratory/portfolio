@@ -105,7 +105,7 @@ export default function FeaturedProjectSection() {
             <Box sx={{ display: 'flex', gap: 2, mt: 3, flexWrap: 'wrap' }}>
               <Button
                 variant="contained"
-                href="https://geo-platform-axhipqo2p-juanmanueltorres-creators-projects.vercel.app"
+                href="https://geo-platform-cyan.vercel.app/"
                 target="_blank"
               >
                 {t('featured.btnLiveDemo')}
