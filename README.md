@@ -4,8 +4,7 @@
 
 > Modern, bilingual portfolio built with React 18, Vite 5, TypeScript, and Material-UI 5. Showcasing geospatial projects and full-stack development expertise.
 >
-> 🌐 **Live:** [insightlaboratory.github.io/portfolio](https://insightlaboratory.github.io/portfolio/)
-
+> 🌐 **Live:** 
 ---
 
 ## 🚀 Stack & Features
@@ -108,7 +107,6 @@ npx vite build
 - 🔗 [GitHub](https://github.com/InsightLaboratory)
 - 💼 [LinkedIn](https://www.linkedin.com/in/juanmtorres23/)
 - 🌐 [InsightLab](https://insightlaboratory.github.io)
-- 📧 Contact form on the [portfolio site](https://insightlaboratory.github.io/portfolio/#contact)
 
 ---
 
