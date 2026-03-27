@@ -14,6 +14,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Evita overflow horizontal que hace desaparecer elementos responsive */
+body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
