@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -7,9 +7,11 @@ type Props = {
 };
 
 export default function ExplorationViewer({ onClose }: Props) {
+  const mapRef = useRef<L.Map | null>(null);
+  const [coords, setCoords] = useState({ lat: 0, lng: 0 });
+
   useEffect(() => {
     const mapContainer = document.getElementById("exploration-map");
-
     if (!mapContainer) return;
 
     const map = L.map(mapContainer, {
@@ -17,6 +19,8 @@ export default function ExplorationViewer({ onClose }: Props) {
       zoom: 12,
       zoomControl: true,
     });
+
+    mapRef.current = map;
 
     L.tileLayer(
       "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
@@ -30,11 +34,17 @@ export default function ExplorationViewer({ onClose }: Props) {
       .bindPopup("Exploration Area")
       .openPopup();
 
-    // 🔥 doble invalidación (mucho más estable)
+    // 🧭 EVENTO GEO (clave)
+    map.on("mousemove", (e: L.LeafletMouseEvent) => {
+      setCoords({ lat: e.latlng.lat, lng: e.latlng.lng });
+    });
+
+    // Fix render overlay
     setTimeout(() => map.invalidateSize(), 200);
     setTimeout(() => map.invalidateSize(), 800);
 
     return () => {
+      map.off();
       map.remove();
     };
   }, []);
@@ -47,6 +57,10 @@ export default function ExplorationViewer({ onClose }: Props) {
           <button onClick={onClose} style={styles.closeBtn}>
             ✕
           </button>
+        </div>
+
+        <div style={styles.coords}>
+          Lat: {coords.lat.toFixed(5)} | Lon: {coords.lng.toFixed(5)}
         </div>
 
         <div
@@ -99,6 +113,13 @@ const styles = {
     color: "#00ff88",
     fontSize: "16px",
     cursor: "pointer",
+  },
+  coords: {
+    padding: "6px 10px",
+    fontSize: "12px",
+    color: "#00ff88",
+    borderBottom: "1px solid rgba(0,255,120,0.1)",
+    fontFamily: "monospace",
   },
   map: {
     width: "100%",
