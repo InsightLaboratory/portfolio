@@ -104,50 +104,49 @@ export default function FeaturedProjectSection() {
         </Box>
 
         {/* Visual Block: Map + Chart (balanced proportions) */}
-        <Box sx={{
-          maxWidth: 1100,
-          mx: 'auto',
-          mb: { xs: 4, md: 6 },
-          mt: { xs: 4, md: 7 },
-          pt: 0,
-          pb: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}>
-          <Box sx={{ width: { xs: '100%', sm: '85%' }, maxWidth: 900, mb: { xs: 2, md: 3 } }}>
-            <img
+        <Box
+          sx={{
+            maxWidth: 460,
+            mx: 'auto',
+            mb: { xs: 4, md: 6 },
+            mt: { xs: 4, md: 7 },
+          }}
+        >
+          <Box
+            sx={{
+              position: 'relative',
+              minHeight: { xs: 200, sm: 250, md: 310 },
+              borderRadius: 4,
+              overflow: 'hidden',
+              border: '1px solid rgba(255,255,255,0.08)',
+              background:
+                theme.palette.mode === 'dark'
+                  ? 'linear-gradient(180deg, rgba(20, 27, 40, 0.96), rgba(11, 16, 26, 0.98))'
+                  : 'linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 247, 251, 0.98))',
+              boxShadow:
+                theme.palette.mode === 'dark'
+                  ? '0 24px 60px rgba(0, 0, 0, 0.3)'
+                  : '0 20px 45px rgba(15, 23, 42, 0.12)',
+              '&:hover img': {
+                transform: 'scale(1.02)',
+              },
+            }}
+          >
+            <Box
+              component="img"
               src={`${(import.meta as any).env.BASE_URL}images/map.png`}
               alt="Drillhole spatial visualization using PostGIS and Leaflet"
-              style={{
+              sx={{
                 width: '100%',
-                height: 'auto',
-                maxHeight: 340,
-                borderRadius: 12,
-                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                height: '100%',
                 display: 'block',
-                margin: '0 auto',
                 objectFit: 'cover',
+                objectPosition: 'center 35%',
+                transition: 'transform 0.35s ease',
               }}
             />
           </Box>
-          <Box sx={{ width: { xs: '100%', sm: '68%' }, maxWidth: 720, mb: { xs: 1, md: 2 } }}>
-            <img
-              src={`${(import.meta as any).env.BASE_URL}images/chart.png`}
-              alt="Assay analysis chart showing depth vs grade relationship"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxHeight: 240,
-                borderRadius: 12,
-                boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
-                display: 'block',
-                margin: '0 auto',
-                objectFit: 'contain',
-              }}
-            />
-          </Box>
-          <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic', textAlign: 'center', mt: 0.5 }}>
+          <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic', textAlign: 'center', mt: 2 }}>
             Drillhole and assay data visualized with PostGIS, Leaflet, and custom analytics.
           </Typography>
         </Box>
