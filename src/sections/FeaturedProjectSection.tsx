@@ -225,7 +225,7 @@ export default function FeaturedProjectSection() {
         <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mt: { xs: 2, md: 4 } }}>
           <Button
             variant="contained"
-            href="https://geo-platform-cyan.vercel.app/"
+            href="https://sanjuangeo.vercel.app/"
             target="_blank"
             size="large"
             sx={{ fontWeight: 600 }}
@@ -242,7 +242,7 @@ export default function FeaturedProjectSection() {
           </Button>
           <Button
             variant="outlined"
-            href="https://github.com/InsightLaboratory/Geo_Platform"
+            href="https://github.com/juanmanueltorres-creator/Geo_Platform"
             target="_blank"
             size="large"
           >
