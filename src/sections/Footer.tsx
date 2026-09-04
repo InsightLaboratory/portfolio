@@ -19,7 +19,7 @@ export default function Footer() {
         <Typography sx={{ mb: 1 }}>
           {t('footer.copyright')} •{' '}
           <Link
-            href="https://github.com/InsightLaboratory"
+            href="https://github.com/juanmanueltorres-creator"
             target="_blank"
             rel="noopener noreferrer"
             sx={{ color: 'primary.light' }}
