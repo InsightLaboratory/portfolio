@@ -119,7 +119,7 @@ export default function ContactSection() {
                 <Box sx={{ mb: 4 }}>
                   <Typography sx={{ mb: 2 }}>
                     <Link
-                      href="https://github.com/InsightLaboratory"
+                      href="https://github.com/juanmanueltorres-creator"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
