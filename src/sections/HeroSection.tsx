@@ -97,7 +97,7 @@ export default function HeroSection() {
           <Button
             variant="outlined"
             size="large"
-            href="https://github.com/InsightLaboratory"
+            href="https://github.com/juanmanueltorres-creator"
             target="_blank"
             startIcon={<GitHubIcon />}
           >
